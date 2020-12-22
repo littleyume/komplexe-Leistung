@@ -1,0 +1,148 @@
+%Dokumentklasse
+\documentclass[a4paper,12pt]{scrreprt}
+\usepackage[left= 2.5cm,right = 2cm, bottom = 4 cm]{geometry}
+%\usepackage[onehalfspacing]{setspace}
+% ============= Packages =============
+
+% Dokumentinformationen
+\usepackage[
+	pdftitle={Komplexe Leistung},
+	pdfsubject={},
+	pdfauthor={Lily Wagner},
+	pdfkeywords={},	
+	%Links nicht einrahmen
+	hidelinks
+]{hyperref}
+
+
+% Standard Packages
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx, subfig}
+\graphicspath{{img/}}
+\usepackage{fancyhdr}
+\usepackage{lmodern}
+\usepackage{color}
+\usepackage{float}
+
+%Punkte wegmachen
+%\usepackage[titles]{tocloft}
+%\renewcommand{\cftdot}{}
+
+
+
+
+% Literaturverzeichnis
+\usepackage[backend = biber,
+			bibencoding = utf8,
+			%style = ieee
+			style = authoryear
+			%style = authortitle,
+			%style = alphabetic,
+			]{biblatex}
+\addbibresource{biblio.bib}
+
+% Code
+\usepackage{listings}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\definecolor{burgundy}{rgb}{0.5, 0.0, 0.13}
+
+\lstdefinestyle{Python}{
+    language        = Python,
+    basicstyle      = \ttfamily,
+    keywordstyle    = \color{blue},
+    stringstyle     = \color{codegreen},
+    commentstyle    = \color{burgundy}\ttfamily
+}
+
+\lstset{
+    frame       = single,
+    numbers     = left,
+    showspaces  = false,
+    showstringspaces    = false,
+    captionpos  = t,
+    caption     = \lstname,
+    tabsize 	  = 2,
+    literate={\ \ }{{\ }}1
+}
+
+\def\inline{\lstinline[basicstyle=\ttfamily,keywordstyle={}]}
+
+% zusätzliche Schriftzeichen der American Mathematical Society
+\usepackage{amsfonts}
+\usepackage{amsmath}
+
+% nicht einrücken nach Absatz
+\setlength{\parindent}{0pt}
+
+% Automatische Absatz Abstand
+\setlength\parskip{0.8em} 
+
+% ============= Kopf- und Fußzeile =============
+\pagestyle{fancy}
+%
+\lhead{}
+\chead{}
+\rhead{\slshape \leftmark}
+%%
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+%%
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% ============= Package Einstellungen & Sonstiges ============= 
+%Besondere Trennungen
+\hyphenation{De-zi-mal-tren-nung}
+
+
+% ============= Table of Contents umdefinieren ================
+
+
+% ============= Dokumentbeginn =============
+
+\begin{document}
+%Seiten ohne Kopf- und Fußzeile sowie Seitenzahl
+\pagestyle{empty}
+
+\include{01_titel}
+
+% Beendet eine Seite und erzwingt auf den nachfolgenden Seiten die Ausgabe aller Gleitobjekte (z.B. Abbildungen), die bislang definiert, aber noch nicht ausgegeben wurden. Dieser Befehl fügt, falls nötig, eine leere Seite ein, sodaß die nächste Seite nach den Gleitobjekten eine ungerade Seitennummer hat. 
+\cleardoubleoddpage
+
+% pagestyle für gesamtes Dokument aktivieren
+\pagestyle{fancy}
+
+%Inhaltsverzeichnis
+\tableofcontents
+
+
+
+\include{02_einleitung}
+\include{03_grundlagen}
+\include{04_speisende_philosophen}
+\include{05_programmierung}
+\include{06_fazit}
+
+
+\printbibliography[heading=bibintoc]
+
+
+\cleardoublepage
+% \phantomsection
+\renewcommand{\listfigurename}{Materialienverzeichnis}
+
+\addcontentsline{toc}{chapter}{\listfigurename}
+%Verzeichnis aller Bilder
+\listoffigures
+
+%Verzeichnis aller Tabellen
+\listoftables
+
+\end{document}

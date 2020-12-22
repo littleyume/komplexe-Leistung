@@ -1,0 +1,149 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{baun2017}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b7b5f257527a89babe711587b7a7fa25}{%
+           family={Baun},
+           familyi={B\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Deutschland}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{b7b5f257527a89babe711587b7a7fa25}
+      \strng{fullhash}{b7b5f257527a89babe711587b7a7fa25}
+      \strng{bibnamehash}{b7b5f257527a89babe711587b7a7fa25}
+      \strng{authorbibnamehash}{b7b5f257527a89babe711587b7a7fa25}
+      \strng{authornamehash}{b7b5f257527a89babe711587b7a7fa25}
+      \strng{authorfullhash}{b7b5f257527a89babe711587b7a7fa25}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-662-61410-5}
+      \field{title}{Betriebssysteme kompakt}
+      \field{year}{2017}
+    \endentry
+    \entry{sturm2001}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c8277eeabc201556630e2c749a31a28b}{%
+           family={J.\bibnamedelimi Nehmer},
+           familyi={J\bibinitperiod\bibinitdelim N\bibinitperiod},
+           given={P.\bibnamedelimi Sturm},
+           giveni={P\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {dpunkt.verlag}%
+      }
+      \strng{namehash}{c8277eeabc201556630e2c749a31a28b}
+      \strng{fullhash}{c8277eeabc201556630e2c749a31a28b}
+      \strng{bibnamehash}{c8277eeabc201556630e2c749a31a28b}
+      \strng{authorbibnamehash}{c8277eeabc201556630e2c749a31a28b}
+      \strng{authornamehash}{c8277eeabc201556630e2c749a31a28b}
+      \strng{authorfullhash}{c8277eeabc201556630e2c749a31a28b}
+      \field{sortinit}{J}
+      \field{sortinithash}{c45040a764d616897e7f5b30174d7b92}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{3-89864-115-5}
+      \field{title}{Grundlagen moderner Bertriebssysteme}
+      \field{year}{2001}
+    \endentry
+    \entry{rechenberg2000}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4a8fc12c8983ca5947055f76fb1abd29}{%
+           family={Rechenberg},
+           familyi={R\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {München, Deutschland und Wien, Österreich}%
+      }
+      \list{publisher}{1}{%
+        {Hanser}%
+      }
+      \strng{namehash}{4a8fc12c8983ca5947055f76fb1abd29}
+      \strng{fullhash}{4a8fc12c8983ca5947055f76fb1abd29}
+      \strng{bibnamehash}{4a8fc12c8983ca5947055f76fb1abd29}
+      \strng{authorbibnamehash}{4a8fc12c8983ca5947055f76fb1abd29}
+      \strng{authornamehash}{4a8fc12c8983ca5947055f76fb1abd29}
+      \strng{authorfullhash}{4a8fc12c8983ca5947055f76fb1abd29}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{3-446-21319-8}
+      \field{title}{Was ist Informatik}
+      \field{year}{2000}
+    \endentry
+    \entry{tanenbaum2016}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2414455c999bc471f803cd14fdea939d}{%
+           family={Tanenbaum},
+           familyi={T\bibinitperiod},
+           given={Andrew\bibnamedelima S},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Hallbergmoos, Deutschland}%
+      }
+      \list{publisher}{1}{%
+        {Pearson}%
+      }
+      \strng{namehash}{2414455c999bc471f803cd14fdea939d}
+      \strng{fullhash}{2414455c999bc471f803cd14fdea939d}
+      \strng{bibnamehash}{2414455c999bc471f803cd14fdea939d}
+      \strng{authorbibnamehash}{2414455c999bc471f803cd14fdea939d}
+      \strng{authornamehash}{2414455c999bc471f803cd14fdea939d}
+      \strng{authorfullhash}{2414455c999bc471f803cd14fdea939d}
+      \field{sortinit}{T}
+      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9783868942705}
+      \field{title}{Moderne Betriebssysteme}
+      \field{year}{2016}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
