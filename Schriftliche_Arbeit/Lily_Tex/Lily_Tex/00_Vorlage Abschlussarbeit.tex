@@ -1,6 +1,6 @@
 %Dokumentklasse
 \documentclass[a4paper,12pt]{scrreprt}
-\usepackage[left= 2.5cm,right = 2cm, bottom = 4 cm]{geometry}
+\usepackage[left= 2.5cm,right = 2.5cm, bottom = 4 cm, top = 3 cm]{geometry}
 %\usepackage[onehalfspacing]{setspace}
 % ============= Packages =============
 
@@ -26,13 +26,6 @@
 \usepackage{color}
 \usepackage{float}
 
-%Punkte wegmachen
-%\usepackage[titles]{tocloft}
-%\renewcommand{\cftdot}{}
-
-
-
-
 % Literaturverzeichnis
 \usepackage[backend = biber,
 			bibencoding = utf8,
@@ -42,6 +35,11 @@
 			%style = alphabetic,
 			]{biblatex}
 \addbibresource{biblio.bib}
+
+
+%=====================================
+\linespread{1.5}
+%=====================================
 
 % Code
 \usepackage{listings}
@@ -119,6 +117,15 @@
 % pagestyle für gesamtes Dokument aktivieren
 \pagestyle{fancy}
 
+
+%=====================================================
+% LEERER VORSCHLAG, AUSKOMMENTIEREN WENN WIE VORHER
+
+\makeatletter
+\addtocontents{toc}{\def\string\@dotsep{500}}
+\makeatother
+%=====================================================
+
 %Inhaltsverzeichnis
 \tableofcontents
 
@@ -140,9 +147,11 @@
 
 \addcontentsline{toc}{chapter}{\listfigurename}
 %Verzeichnis aller Bilder
+\makeatletter
+\renewcommand\@dotsep{10000}
+\makeatother
 \listoffigures
 
-%Verzeichnis aller Tabellen
 \listoftables
 
 \end{document}

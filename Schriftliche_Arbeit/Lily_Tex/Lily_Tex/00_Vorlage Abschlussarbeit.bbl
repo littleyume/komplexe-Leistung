@@ -46,7 +46,6 @@
       \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{isbn}{978-3-662-61410-5}
       \field{title}{Betriebssysteme kompakt}
       \field{year}{2017}
     \endentry
@@ -77,9 +76,42 @@
       \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{isbn}{3-89864-115-5}
       \field{title}{Grundlagen moderner Bertriebssysteme}
       \field{year}{2001}
+    \endentry
+    \entry{bug}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ad14f710e6040719f6aada39dadfaeb4}{%
+           family={Kolokythas},
+           familyi={K\bibinitperiod},
+           given={Panagiotis},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ad14f710e6040719f6aada39dadfaeb4}
+      \strng{fullhash}{ad14f710e6040719f6aada39dadfaeb4}
+      \strng{bibnamehash}{ad14f710e6040719f6aada39dadfaeb4}
+      \strng{authorbibnamehash}{ad14f710e6040719f6aada39dadfaeb4}
+      \strng{authornamehash}{ad14f710e6040719f6aada39dadfaeb4}
+      \strng{authorfullhash}{ad14f710e6040719f6aada39dadfaeb4}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Letzter Stand 22.11.2020, 15:02}
+      \field{title}{"Windows 10: Update-Bug sorgt für hohe CPU-Auslastung"}
+      \field{urlday}{22}
+      \field{urlmonth}{11}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb "https://www.pcwelt.de/news/Windows-10-Update-Bug-sorgt-fuer-hohe-CPU-Auslastung-10657717.html"
+      \endverb
+      \verb{url}
+      \verb https://www.pcwelt.de/news/Windows-10-Update-Bug-sorgt-fuer-hohe-CPU-Auslastung-10657717.html
+      \endverb
     \endentry
     \entry{rechenberg2000}{book}{}
       \name{author}{1}{}{%
@@ -108,7 +140,6 @@
       \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{isbn}{3-446-21319-8}
       \field{title}{Was ist Informatik}
       \field{year}{2000}
     \endentry
@@ -139,7 +170,6 @@
       \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{isbn}{9783868942705}
       \field{title}{Moderne Betriebssysteme}
       \field{year}{2016}
     \endentry
