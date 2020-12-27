@@ -6,7 +6,6 @@ import random
 class Philosophers(Process):
     def __init__(self, name, leftFork, rightFork):
         print("{} Has sat down the table".format(name))
-        # Hier passiert XY
         Process.__init__(self, name=name)
         self.leftFork = leftFork
         self.rightFork = rightFork

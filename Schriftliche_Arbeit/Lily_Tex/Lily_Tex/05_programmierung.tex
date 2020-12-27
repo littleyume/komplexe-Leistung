@@ -7,15 +7,55 @@
 
 \begin{lstlisting}[style = Python, label = {erste Lösung}, caption = {erste "naive" Lösung}]
 
+from multiprocessing import Process, current_process, RLock
+import time
+import random
+
+
+class Philosophers(Process):
+    def __init__(self, name, leftFork, rightFork):
+        print("{} Has sat down the table".format(name))
+        Process.__init__(self, name=name)
+        self.leftFork = leftFork
+        self.rightFork = rightFork
+
+    def run(self):
+        print("{} has started thinking".format(current_process().name)) 
+        #Philosoph x hat mit denken begonnen
+        while True:
+            time.sleep(random.randint(1, 5))
+            print("{} has finished thinking".format(current_process().name))
+            self.leftFork.acquire() 
+            #philosoph x hat die linke Gabel
+            time.sleep(random.randint(1, 5))
+            try:
+                print("{} has acquired the left fork".format(current_process().name))
+
+                self.rightFork.acquire() 
+                #Philosoph x hat die rechte Gabel
+                try:
+                    print("{} has attainted both forks, currently eating".format(current_process().name)) #Philosoph x hat beide Gabeln
+
+                finally:
+                    self.rightFork.release()
+                    print("{} has released the right fork".format(current_process().name)) 
+                    #Philosoph ist fertg mit essen und gibt die rechte Gable wieder frei
+
+            finally:
+                self.leftFork.release()
+                print("{} has released the left fork".format(current_process().name)) 
+                #Philosoph x hat gibt die linkte Gabel frei
 
 \end{lstlisting}
 
-Das Programm benutzt die Bibliothek "Multiprocessing" sowie "random" und "time". Die Klasse "Philosophers" erbt von "Process". 
+Das Programm benutzt die Bibliothek "Multiprocessing" sowie "random" und "time". Die Klasse "Philosophers" erbt von der Klasse "Process" alle Funktionen und zusätzlich die, die in der Klasse "Philosophers" definiert werden. Die Klasse "Process" wird genutzt um später die Prozesse loszutreten. Die KLasse "Philosophers" wird gebraucht, da die Philsophen Objekte der gleichen Kategorie sind, die sich über die selben Merkmale definieren. Der Initialisierungsfunktion werden die Parameter \inline{name} sowie \inline{leftFork} und  \inline{rightFork}. Aus letzteren werden die Objekte leftFork und rightFork erzeugt. Diese stehen für die rechte- sowie linke Gabel. Der Prozess geht in der Zeit schlafen. In der Zeit, in der der Philosoph denkt, schläft der Prozess. Der Zeitraum in der der Philosoph denken soll, wird zufällig zwischen einer und fünf Sekunden ausgewählt. Wenn der Philosoph fertig ist mit denken, fordert er die linke Gable an. Danach soll er versuchen die rechte Gabel zu bekommen. Hat er beide Gabeln so kann er essen. Ist er damit fertig so kann er erst die rechte und dann die linke Gabel wieder freigeben.
+
+Nun der Lösungsansatz hierbei ist, dass die Gabeln einen RLock repräsentieren. Das heißt die Prozesse besetzen immer Sperren. Um die Sperren zu besetzen, ruft der Prozess die aquire()-Funktion auf. Um sie wieder freizugeben ruft er die release()-Funktion auf. Diese "Lösung" ist jedoch nicht deadlockfrei. Wollen zwei Prozesse die gleiche Sperre besetzen so verklemmt das Programm sofort. 
 
 \section{Lösungen}
 \label{endlösung}
 
-Die Endlösung besteht darin, die  
+ 
 
 
 
