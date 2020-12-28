@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.9.13)  27 DEC 2020 11:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.9.13)  28 DEC 2020 10:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -766,6 +766,9 @@ File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
 )
 (./00_Vorlage Abschlussarbeit.aux (./01_titel.aux) (./02_einleitung.aux)
 (./03_grundlagen.aux) (./04_speisende_philosophen.aux) (./05_programmierung.aux
+
+LaTeX Warning: Label `mein_beispiel' multiply defined.
+
 ) (./06_fazit.aux))
 \openout1 = `"00_Vorlage Abschlussarbeit.aux"'.
 
@@ -1122,12 +1125,12 @@ Overfull \hbox (115.33322pt too wide) in paragraph at lines 46--47
 ][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[14]) [15]
+[14] [15]) [16]
 \openout2 = `06_fazit.aux'.
 
  (./06_fazit.tex
 chapter 5.
-) [16
+) [17
 
 
 
@@ -1145,14 +1148,14 @@ Overfull \hbox (2.51978pt too wide) in paragraph at lines 141--141
 10: Update-Bug sorgt für ho-he CPU-Auslastung"\T1/lmr/m/n/12 .
  []
 
-[17
+[18
 
 
 ] (./00_Vorlage Abschlussarbeit.lof)
 \tf@lof=\write6
 \openout6 = `"00_Vorlage Abschlussarbeit.lof"'.
 
- [18
+ [19
 
 
 
@@ -1161,7 +1164,7 @@ Overfull \hbox (2.51978pt too wide) in paragraph at lines 141--141
 \openout7 = `"00_Vorlage Abschlussarbeit.lot"'.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 157.
-[19
+[20
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 157.
@@ -1173,6 +1176,10 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 157.
 Package rerunfilecheck Info: File `"00_Vorlage Abschlussarbeit".out' has not ch
 anged.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package logreq Info: Writing requests to '"00_Vorlage Abschlussarbeit".run.xml'
 .
 \openout1 = `"00_Vorlage Abschlussarbeit.run.xml"'.
@@ -1180,23 +1187,23 @@ Package logreq Info: Writing requests to '"00_Vorlage Abschlussarbeit".run.xml'
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 157.
  ) 
 Here is how much of TeX's memory you used:
- 20882 strings out of 480608
- 364342 string characters out of 5905088
- 1188387 words of memory out of 5000000
- 36344 multiletter control sequences out of 15000+600000
+ 20896 strings out of 480608
+ 364542 string characters out of 5905088
+ 1188477 words of memory out of 5000000
+ 36347 multiletter control sequences out of 15000+600000
  587955 words of font info for 57 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 53i,11n,72p,10198b,2193s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,12n,72p,10198b,3351s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/app/texlive/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</app/texlive/texmf-dis
 t/fonts/type1/public/lm/lmbx12.pfb></app/texlive/texmf-dist/fonts/type1/public/
 lm/lmcsc10.pfb></app/texlive/texmf-dist/fonts/type1/public/lm/lmr12.pfb></app/t
 exlive/texmf-dist/fonts/type1/public/lm/lmri12.pfb></app/texlive/texmf-dist/fon
 ts/type1/public/lm/lmro12.pfb></app/texlive/texmf-dist/fonts/type1/public/lm/lm
 ssbx10.pfb></app/texlive/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on "00_Vorlage Abschlussarbeit.pdf" (19 pages, 235201 bytes).
+Output written on "00_Vorlage Abschlussarbeit.pdf" (20 pages, 237148 bytes).
 PDF statistics:
- 291 PDF objects out of 1000 (max. 8388607)
- 252 compressed objects within 3 object streams
- 85 named destinations out of 1000 (max. 500000)
+ 306 PDF objects out of 1000 (max. 8388607)
+ 266 compressed objects within 3 object streams
+ 96 named destinations out of 1000 (max. 500000)
  133 words of extra memory for PDF output out of 10000 (max. 10000000)
 

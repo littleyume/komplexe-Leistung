@@ -16,7 +16,7 @@ class Philosophers(Process):
             print("{} has finished thinking".format(current_process().name)) #Philosoph x ist bereit zum Essen
 
             self.leftFork.acquire(True) #philosoph x hat die linke Gabel
-            #wenn die linke Gabel besetzt ist, bekommen wr von aquire- funktion True zurük
+            #wenn die linke Gabel besetzt ist, bekommen wir von aquire- funktion True zurük
             time.sleep(random.randint(1, 5))
             try:
                 print("{} has acquired the left fork".format(current_process().name))

@@ -48,16 +48,30 @@ class Philosophers(Process):
 
 \end{lstlisting}
 
-Das Programm benutzt die Bibliothek "Multiprocessing" sowie "random" und "time". Die Klasse "Philosophers" erbt von der Klasse "Process" alle Funktionen und zusätzlich die, die in der Klasse "Philosophers" definiert werden. Die Klasse "Process" wird genutzt um später die Prozesse loszutreten. Die KLasse "Philosophers" wird gebraucht, da die Philsophen Objekte der gleichen Kategorie sind, die sich über die selben Merkmale definieren. Der Initialisierungsfunktion werden die Parameter \inline{name} sowie \inline{leftFork} und  \inline{rightFork}. Aus letzteren werden die Objekte leftFork und rightFork erzeugt. Diese stehen für die rechte- sowie linke Gabel. Der Prozess geht in der Zeit schlafen. In der Zeit, in der der Philosoph denkt, schläft der Prozess. Der Zeitraum in der der Philosoph denken soll, wird zufällig zwischen einer und fünf Sekunden ausgewählt. Wenn der Philosoph fertig ist mit denken, fordert er die linke Gable an. Danach soll er versuchen die rechte Gabel zu bekommen. Hat er beide Gabeln so kann er essen. Ist er damit fertig so kann er erst die rechte und dann die linke Gabel wieder freigeben.
+In dem Programm werden die Bibliotheken "Multiprocessing" sowie "random" und "time" importiert. Die Klasse "Philosophers" erbt von der Klasse "Process" alle Funktionen und zusätzlich die, die in der Klasse "Philosophers" definiert werden. Zugleich kann ein Prozess losgetreten werden. Da sich die Philosophen über die gleichen Merkamle definjeren und sogesehen Objekte gleicher Kategorie sind können sie in einer kalsse zusammengefasst werden. Der Initialisierungsfunktion werden die Parameter \inline{name} sowie \inline{leftFork} und  \inline{rightFork}. Aus letzteren werden die Objekte leftFork und rightFork erzeugt. Diese stehen für die rechte- sowie linke Gabel. In der Zeit, in der der Philosoph denkt, schläft der Prozess(Programmzeile 18) repräsentativ. Der Zeitraum in der der Philosoph denken soll, wird zufällig zwischen einer und fünf Sekunden ausgewählt. Wenn der Philosoph fertig mit denken ist, fordert er die linke Gable an. Danach soll er versuchen die rechte Gabel zu bekommen. Hat er beide Gabeln so kann er essen. Ist er damit fertig, so kann er erst die rechte und dann die linke Gabel wieder freigeben.
 
 Nun der Lösungsansatz hierbei ist, dass die Gabeln einen RLock repräsentieren. Das heißt die Prozesse besetzen immer Sperren. Um die Sperren zu besetzen, ruft der Prozess die aquire()-Funktion auf. Um sie wieder freizugeben ruft er die release()-Funktion auf. Diese "Lösung" ist jedoch nicht deadlockfrei. Wollen zwei Prozesse die gleiche Sperre besetzen so verklemmt das Programm sofort. 
 
 \section{Lösungen}
 \label{endlösung}
 
+\begin{lstlisting}[style = Python, label = {mein_beispiel}, caption = {Das zeige ich euch}]
+
+
+
+%\end{lstlisting}
+
+Um diesem Problem vorzubeugen kann man der aquire()-Funktion entweder ein True oder ein False mitgeben. Die Funktion gibt True zurück, sollte der Lock besetzt sein, False falls nicht. Setzt man die Funktion auf True, so geht der Programmcode nicht weiter bis die Funktion ausgeführt ist, in diesem Fall wenn der Lock besetzt ist. Das heißt, will ein Prozess den Lock besetzen, so muss er immer wieder versuchen, diesen zu besetzen, bis dieser wieder freigegeben ist. Dieses Verfahren heißt blocking. 
+
+\begin{lstlisting}[style = Python, label = {mein_beispiel}, caption = {Das zeige ich euch}]
+
+
+
+%\end{lstlisting}
+
+
+Der Prozess wird immer wieder versuchen die linke Gabel zu belegen, bis diese freigegeben ist. Dann soll er versuchen die rechte Gabel zu erlangen. Da dieser Lock auf False gesetzt ist, wird er das nur einmal versuchen. Geprüft werden kann dies an der Variable "locked". Scheitert dieser Versuch, so ist der Prozess nicht auf "locked" gesetzt und die linke Gabel wird wieder freigeben. Gelingt er, so kann man dies feststellen, da dann der Zustand des Prozesses auf locked gesetzt wird. Der Philosoph hat nun beide Gabeln, kann essen, dann die rechte und zuletzt auch die linke Gabel wieder freigeben. Nun kann der nächste Prozess wieder versuchen den Lock zu ergattern.
  
-
-
 
 
 
