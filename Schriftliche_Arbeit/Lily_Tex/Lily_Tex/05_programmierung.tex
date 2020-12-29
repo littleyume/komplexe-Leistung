@@ -1,12 +1,11 @@
 \chapter{Programmierung}
 \label{programmierung}
-
-%In diesem Kapitel soll die mögliche Programmierung des Modells der speisenden Philosophen mithilfe der Programmiersprache Python3 vorgestellt werden. 
-
 \section{Erste Lösung mit Problemdarstellung}
 \label{erste_lösung}
 
-In dem Programm werden die Bibliotheken "Multiprocessing" sowie "random" und "time" importiert. Die Klasse "Philosophers" erbt von der Klasse "Process" alle Funktionen und zusätzlich die, die in der Klasse "Philosophen" definiert werden. Zugleich kann ein Prozess losgetreten werden. Da sich die Philosophen über die gleichen Merkmale definjeren und sogesehen Objekte gleicher Kategorie sind, können sie in einer Klasse zusammengefasst werden. Der Initialisierungsfunktion werden die Parameter \inline{name} sowie \inline{leftFork} und  \inline{rightFork} übergeben. Aus letzteren werden die Objekte leftFork und rightFork erzeugt. Diese stehen für die rechte- sowie linke Gabel.
+In diesem Kapitel soll die mögliche Programmierung des Modells der speisenden Philosophen mithilfe der Programmiersprache Python3 vorgestellt werden.
+
+In dem Programm werden die Bibliotheken \glqq Multiprocessing'' sowie \glqq random'' und \glqq time'' importiert. Die Klasse \glqq Philosophers'' erbt von der Klasse \glqq Process'' alle Funktionen und zusätzlich die, die in der Klasse "Philosophen" definiert werden. Zugleich kann ein Prozess losgetreten werden. Da sich die Philosophen über die gleichen Merkmale definjeren und sogesehen Objekte gleicher Kategorie sind, können sie in einer Klasse zusammengefasst werden. Der Initialisierungsfunktion werden die Parameter \inline{name} sowie \inline{leftFork} und  \inline{rightFork} übergeben. Aus letzteren werden die Objekte leftFork und rightFork erzeugt. Diese stehen für die rechte- sowie linke Gabel.
 
 \begin{lstlisting}[style = Python, label = {erste Lösung}, caption = {Klasse Philosophen}]
 
@@ -24,7 +23,7 @@ class Philosophen(Process):
         
 \end{lstlisting}
 
-Die von der Klasse "Process" geerbte run()-Funktion wurde in das Programm eingefügt um die Handlungsfolge der Tätigkeiten zu bestimmen. In der Zeit, in der der Philosoph denkt, schläft der Prozess(Programmzeile 18) repräsentativ. Für den angegebenen Zeitraum wird die Ausführung des Programms angehalten. Ist diese Zeitspanne vorbei so geht der Programmcode weiter. In diesem Beispiel wird besprochener Zeitraum zufällig mithilfe der \inline{random} Methode zwischen einer und fünf Sekunden ausgewählt \parencite{sleep}. Wenn der Philosoph fertig mit denken ist, fordert er die linke Gable an. Danach soll er versuchen die rechte Gabel zu bekommen. Hat er beide Gabeln so kann er essen. Ist er damit fertig, so kann er erst die rechte und dann die linke Gabel wieder freigeben.
+Die von der Klasse \glqq Process'' geerbte run()-Funktion wurde in das Programm eingefügt um die Handlungsfolge der Tätigkeiten zu bestimmen. In der Zeit, in der der Philosoph denkt, schläft der Prozess(Programmzeile 18) repräsentativ. Für den angegebenen Zeitraum wird die Ausführung des Programms angehalten. Ist diese Zeitspanne vorbei so geht der Programmcode weiter. In diesem Beispiel wird besprochener Zeitraum zufällig mithilfe der \inline{random} Methode zwischen einer und fünf Sekunden ausgewählt \parencite{sleep}. Wenn der Philosoph fertig mit denken ist, fordert er die linke Gable an. Danach soll er versuchen die rechte Gabel zu bekommen. Hat er beide Gabeln so kann er essen. Ist er damit fertig, so kann er erst die rechte und dann die linke Gabel wieder freigeben.
 
 \begin{lstlisting}[style = Python, label = {erste Lösung}, caption = {erste "naive" Lösung}]
 

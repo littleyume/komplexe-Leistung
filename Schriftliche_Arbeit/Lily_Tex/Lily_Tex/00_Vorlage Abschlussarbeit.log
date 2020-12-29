@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.9.13)  28 DEC 2020 10:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.9.13)  29 DEC 2020 19:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -767,7 +767,7 @@ File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
 (./00_Vorlage Abschlussarbeit.aux (./01_titel.aux) (./02_einleitung.aux)
 (./03_grundlagen.aux) (./04_speisende_philosophen.aux) (./05_programmierung.aux
 
-LaTeX Warning: Label `mein_beispiel' multiply defined.
+LaTeX Warning: Label `erste Lösung' multiply defined.
 
 ) (./06_fazit.aux))
 \openout1 = `"00_Vorlage Abschlussarbeit.aux"'.
@@ -1076,56 +1076,60 @@ chapter 4.
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 8.
-
-Overfull \hbox (41.23227pt too wide) in paragraph at lines 23--24
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][] 
- []
-
-
-Overfull \hbox (63.46255pt too wide) in paragraph at lines 27--28
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][] 
- []
-
-[13
+nput line 10.
+ [13
 
 
 
 ]
-Overfull \hbox (115.33322pt too wide) in paragraph at lines 32--34
+
+LaTeX Warning: Citation 'sleep' on page 14 undefined on input line 26.
+
+
+Overfull \hbox (70.87265pt too wide) in paragraph at lines 31--32
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (63.46255pt too wide) in paragraph at lines 35--36
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (130.15341pt too wide) in paragraph at lines 40--42
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-
-Overfull \hbox (471.01779pt too wide) in paragraph at lines 37--39
+[14]
+Overfull \hbox (374.68655pt too wide) in paragraph at lines 45--47
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+[][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (137.5635pt too wide) in paragraph at lines 41--42
+Overfull \hbox (174.61398pt too wide) in paragraph at lines 49--50
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (122.74332pt too wide) in paragraph at lines 42--44
+Overfull \hbox (122.74332pt too wide) in paragraph at lines 50--52
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][] 
  []
 
 
-Overfull \hbox (115.33322pt too wide) in paragraph at lines 46--47
+Overfull \hbox (152.3837pt too wide) in paragraph at lines 54--55
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[14] [15]) [16]
+[15]) [16]
 \openout2 = `06_fazit.aux'.
 
  (./06_fazit.tex
@@ -1178,7 +1182,15 @@ anged.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                "00_Vorlage Abschlussarbeit"
+(biblatex)                and rerun LaTeX afterwards.
 
 Package logreq Info: Writing requests to '"00_Vorlage Abschlussarbeit".run.xml'
 .
@@ -1187,23 +1199,23 @@ Package logreq Info: Writing requests to '"00_Vorlage Abschlussarbeit".run.xml'
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 157.
  ) 
 Here is how much of TeX's memory you used:
- 20896 strings out of 480608
- 364542 string characters out of 5905088
- 1188477 words of memory out of 5000000
- 36347 multiletter control sequences out of 15000+600000
+ 20884 strings out of 480608
+ 364349 string characters out of 5905088
+ 1184438 words of memory out of 5000000
+ 36344 multiletter control sequences out of 15000+600000
  587955 words of font info for 57 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 53i,12n,72p,10198b,3351s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,12n,72p,10198b,3359s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/app/texlive/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</app/texlive/texmf-dis
 t/fonts/type1/public/lm/lmbx12.pfb></app/texlive/texmf-dist/fonts/type1/public/
 lm/lmcsc10.pfb></app/texlive/texmf-dist/fonts/type1/public/lm/lmr12.pfb></app/t
 exlive/texmf-dist/fonts/type1/public/lm/lmri12.pfb></app/texlive/texmf-dist/fon
 ts/type1/public/lm/lmro12.pfb></app/texlive/texmf-dist/fonts/type1/public/lm/lm
 ssbx10.pfb></app/texlive/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on "00_Vorlage Abschlussarbeit.pdf" (20 pages, 237148 bytes).
+Output written on "00_Vorlage Abschlussarbeit.pdf" (20 pages, 236898 bytes).
 PDF statistics:
- 306 PDF objects out of 1000 (max. 8388607)
- 266 compressed objects within 3 object streams
- 96 named destinations out of 1000 (max. 500000)
+ 296 PDF objects out of 1000 (max. 8388607)
+ 256 compressed objects within 3 object streams
+ 87 named destinations out of 1000 (max. 500000)
  133 words of extra memory for PDF output out of 10000 (max. 10000000)
 
