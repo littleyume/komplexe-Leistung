@@ -5,32 +5,32 @@ import random
 
 class Philosophers(Process):
     def __init__(self, name, leftFork, rightFork):
-        print("{} Has sat down the table".format(name))
+        print("{} Hat sich an den Tisch gesetzt".format(name))
         Process.__init__(self, name=name)
         self.leftFork = leftFork
         self.rightFork = rightFork
 
     def run(self):
-        print("{} has started thinking".format(current_process().name)) #Philosoph x hat mit denken begonnen
+        print("{} hat mit Denken begonnen".format(current_process().name)) #Philosoph x hat mit denken begonnen
         while True:
             time.sleep(random.randint(1, 5))
-            print("{} has finished thinking".format(current_process().name))
+            print("{} ist fertig mit denken".format(current_process().name))
             self.leftFork.acquire() #philosoph x hat die linke Gabel
             time.sleep(random.randint(1, 5))
             try:
-                print("{} has acquired the left fork".format(current_process().name))
+                print("{} hat die linke Gabel".format(current_process().name))
 
                 self.rightFork.acquire() #Philosoph x hat die rechte Gabel
                 try:
-                    print("{} has attainted both forks, currently eating".format(current_process().name)) #Philosoph x hat beide Gabeln
+                    print("{} hat beide Gabeln, isst gerade".format(current_process().name)) #Philosoph x hat beide Gabeln
 
                 finally:
                     self.rightFork.release()
-                    print("{} has released the right fork".format(current_process().name)) #Philosoph ist fertg mit essen und gibt die rechte Gable wieder frei
+                    print("{} hat die rechte Gabel freigegeben".format(current_process().name)) #Philosoph ist fertg mit essen und gibt die rechte Gable wieder frei
 
             finally:
                 self.leftFork.release()
-                print("{} has released the left fork".format(current_process().name)) #Philosoph x hat gibt die linkte Gabel frei
+                print("{} hat die linke Gabel freigegeben".format(current_process().name)) #Philosoph x hat gibt die linkte Gabel frei
 
 
 fork1 = RLock()

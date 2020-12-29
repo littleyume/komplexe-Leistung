@@ -1,69 +1,76 @@
 \chapter{Programmierung}
 \label{programmierung}
 
+%In diesem Kapitel soll die mögliche Programmierung des Modells der speisenden Philosophen mithilfe der Programmiersprache Python3 vorgestellt werden. 
+
 \section{Erste Lösung mit Problemdarstellung}
 \label{erste_lösung}
 
+In dem Programm werden die Bibliotheken "Multiprocessing" sowie "random" und "time" importiert. Die Klasse "Philosophers" erbt von der Klasse "Process" alle Funktionen und zusätzlich die, die in der Klasse "Philosophen" definiert werden. Zugleich kann ein Prozess losgetreten werden. Da sich die Philosophen über die gleichen Merkmale definjeren und sogesehen Objekte gleicher Kategorie sind, können sie in einer Klasse zusammengefasst werden. Der Initialisierungsfunktion werden die Parameter \inline{name} sowie \inline{leftFork} und  \inline{rightFork} übergeben. Aus letzteren werden die Objekte leftFork und rightFork erzeugt. Diese stehen für die rechte- sowie linke Gabel.
 
-\begin{lstlisting}[style = Python, label = {erste Lösung}, caption = {erste "naive" Lösung}]
+\begin{lstlisting}[style = Python, label = {erste Lösung}, caption = {Klasse Philosophen}]
 
 from multiprocessing import Process, current_process, RLock
 import time
 import random
 
 
-class Philosophers(Process):
+class Philosophen(Process):
     def __init__(self, name, leftFork, rightFork):
-        print("{} Has sat down the table".format(name))
+        print("{} hat sich an den Tisch gesetzt".format(name))
         Process.__init__(self, name=name)
         self.leftFork = leftFork
         self.rightFork = rightFork
+        
+\end{lstlisting}
+
+Die von der Klasse "Process" geerbte run()-Funktion wurde in das Programm eingefügt um die Handlungsfolge der Tätigkeiten zu bestimmen. In der Zeit, in der der Philosoph denkt, schläft der Prozess(Programmzeile 18) repräsentativ. Für den angegebenen Zeitraum wird die Ausführung des Programms angehalten. Ist diese Zeitspanne vorbei so geht der Programmcode weiter. In diesem Beispiel wird besprochener Zeitraum zufällig mithilfe der \inline{random} Methode zwischen einer und fünf Sekunden ausgewählt \parencite{sleep}. Wenn der Philosoph fertig mit denken ist, fordert er die linke Gable an. Danach soll er versuchen die rechte Gabel zu bekommen. Hat er beide Gabeln so kann er essen. Ist er damit fertig, so kann er erst die rechte und dann die linke Gabel wieder freigeben.
+
+\begin{lstlisting}[style = Python, label = {erste Lösung}, caption = {erste "naive" Lösung}]
 
     def run(self):
-        print("{} has started thinking".format(current_process().name)) 
+        print("{} hat angefangen zu denken".format(current_process().name)) 
         #Philosoph x hat mit denken begonnen
         while True:
             time.sleep(random.randint(1, 5))
-            print("{} has finished thinking".format(current_process().name))
+            print("{} ist fertig mit denken".format(current_process().name))
             self.leftFork.acquire() 
             #philosoph x hat die linke Gabel
             time.sleep(random.randint(1, 5))
             try:
-                print("{} has acquired the left fork".format(current_process().name))
+                print("{} hat die linke Gabel bekommen".format(current_process().name))
 
                 self.rightFork.acquire() 
                 #Philosoph x hat die rechte Gabel
                 try:
-                    print("{} has attainted both forks, currently eating".format(current_process().name)) #Philosoph x hat beide Gabeln
+                    print("{} hat beide Gabeln, isst gerade".format(current_process().name)) #Philosoph x hat beide Gabeln
 
                 finally:
                     self.rightFork.release()
-                    print("{} has released the right fork".format(current_process().name)) 
+                    print("{} hat die rechte Gabel freigegeben".format(current_process().name)) 
                     #Philosoph ist fertg mit essen und gibt die rechte Gable wieder frei
 
             finally:
                 self.leftFork.release()
-                print("{} has released the left fork".format(current_process().name)) 
+                print("{} hat die linke Gabel freigegeben".format(current_process().name)) 
                 #Philosoph x hat gibt die linkte Gabel frei
 
 \end{lstlisting}
 
-In dem Programm werden die Bibliotheken "Multiprocessing" sowie "random" und "time" importiert. Die Klasse "Philosophers" erbt von der Klasse "Process" alle Funktionen und zusätzlich die, die in der Klasse "Philosophers" definiert werden. Zugleich kann ein Prozess losgetreten werden. Da sich die Philosophen über die gleichen Merkamle definjeren und sogesehen Objekte gleicher Kategorie sind können sie in einer kalsse zusammengefasst werden. Der Initialisierungsfunktion werden die Parameter \inline{name} sowie \inline{leftFork} und  \inline{rightFork}. Aus letzteren werden die Objekte leftFork und rightFork erzeugt. Diese stehen für die rechte- sowie linke Gabel. In der Zeit, in der der Philosoph denkt, schläft der Prozess(Programmzeile 18) repräsentativ. Der Zeitraum in der der Philosoph denken soll, wird zufällig zwischen einer und fünf Sekunden ausgewählt. Wenn der Philosoph fertig mit denken ist, fordert er die linke Gable an. Danach soll er versuchen die rechte Gabel zu bekommen. Hat er beide Gabeln so kann er essen. Ist er damit fertig, so kann er erst die rechte und dann die linke Gabel wieder freigeben.
-
-Nun der Lösungsansatz hierbei ist, dass die Gabeln einen RLock repräsentieren. Das heißt die Prozesse besetzen immer Sperren. Um die Sperren zu besetzen, ruft der Prozess die aquire()-Funktion auf. Um sie wieder freizugeben ruft er die release()-Funktion auf. Diese "Lösung" ist jedoch nicht deadlockfrei. Wollen zwei Prozesse die gleiche Sperre besetzen so verklemmt das Programm sofort. 
+Nun der Lösungsansatz hierbei ist, dass die Gabeln einen RLock repräsentieren. Das heißt die Prozesse besetzen immer Sperren. Um die Sperren zu besetzen, ruft der Prozess die \inline{aquire()}-Funktion auf. Um sie wieder freizugeben ruft er die \inline{release()}-Funktion auf. Diese "Lösung" ist jedoch nicht deadlockfrei. Wollen zwei Prozesse die gleiche Sperre besetzen so verklemmt das Programm sofort. 
 
 \section{Lösungen}
 \label{endlösung}
 
-\begin{lstlisting}[style = Python, label = {mein_beispiel}, caption = {Das zeige ich euch}]
+Um diesem Problem vorzubeugen kann man der aquire()-Funktion entweder ein True oder ein False mitgeben. Die Funktion gibt True zurück, sollte der Lock besetzt sein, False falls nicht. Setzt man die Funktion auf True, so geht der Programmcode nicht weiter bis die Funktion ausgeführt ist, in diesem Fall wenn der Lock besetzt ist. Das heißt, will ein Prozess den Lock besetzen, so muss er immer wieder versuchen, diesen zu besetzen, bis dieser wieder freigegeben ist. Dieses Verfahren heißt blocking. 
+
+%\begin{lstlisting}[style = Python, label = {mein_beispiel}, caption = {Das zeige ich euch}]
 
 
 
 %\end{lstlisting}
 
-Um diesem Problem vorzubeugen kann man der aquire()-Funktion entweder ein True oder ein False mitgeben. Die Funktion gibt True zurück, sollte der Lock besetzt sein, False falls nicht. Setzt man die Funktion auf True, so geht der Programmcode nicht weiter bis die Funktion ausgeführt ist, in diesem Fall wenn der Lock besetzt ist. Das heißt, will ein Prozess den Lock besetzen, so muss er immer wieder versuchen, diesen zu besetzen, bis dieser wieder freigegeben ist. Dieses Verfahren heißt blocking. 
-
-\begin{lstlisting}[style = Python, label = {mein_beispiel}, caption = {Das zeige ich euch}]
+%\begin{lstlisting}[style = Python, label = {mein_beispiel}, caption = {Das zeige ich euch}]
 
 
 
