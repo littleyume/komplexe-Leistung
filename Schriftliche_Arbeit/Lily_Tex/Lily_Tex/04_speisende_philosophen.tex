@@ -23,7 +23,7 @@ Nun werden die Philosophen durch Prozesse ersetzt und die Gabeln durch Betriebsm
 
 \section{Darstellung des Problems}
 \label{problem}
-Um so ein Problem ausfindig zu machen, gibt es verschiedene Möglichkeiten so eine Verklemmung grafisch darzustellen. Um das Problem auflösen zu können, muss es erst sichtbar gemacht werden. Vorgestellt wird zuerst der Betriebsmittelbelegungsgraph. Bei diesem werden die Prozesse mit Kreis und die Betriebsmittel mit Quadrat dargestellt. Diese werden mit Knoten bezeichnet. Die Belegung und Anforderung auf Betriebsmittel wird mit Pfeilen, auch Kanten genannt, dargestellt. Kommt dabei der Pfeil von dem Betriebsmittel zu dem Prozess, so bedeutet das, dass der Prozess dieses schon im Besitz hat. Verläuft der Pfeil von Prozess zu Betriebsmittel so stellt der Prozess die Anforderung an das Betriebsmittel. Der Grundaufbau wird in Abbildung \ref{fig:normaler_betriebsmittelbelegungsgraph} gezeigt.
+Um das Problem ausfindig zu machen, gibt es verschiedene Möglichkeiten eine Verklemmung grafisch darzustellen. Um das Problem besser auflösen zu können, muss es erst sichtbar gemacht werden. Vorgestellt wird zuerst der Betriebsmittelbelegungsgraph. Bei diesem werden die Prozesse mit Kreis und die Betriebsmittel mit Quadrat dargestellt. Diese werden ebenfalls als Knoten bezeichnet. Die Belegung und Anforderung auf Betriebsmittel wird mit Pfeilen, auch Kanten genannt, dargestellt. Kommt dabei der Pfeil von dem Betriebsmittel zu dem Prozess, so bedeutet das, dass der Prozess dieses schon im Besitz hat. Verläuft der Pfeil von Prozess zu Betriebsmittel so stellt der Prozess die Anforderung an das Betriebsmittel. Der Grundaufbau wird in Abbildung \ref{fig:normaler_betriebsmittelbelegungsgraph} gezeigt.
 
 \begin{figure}[h]
 \caption{Normaler Betriebsmittelbelegungsgraph}
@@ -32,8 +32,8 @@ Um so ein Problem ausfindig zu machen, gibt es verschiedene Möglichkeiten so ei
 \includegraphics[width=.4\linewidth]{Belegungsgraph1.png}
 \end{figure}
 
-Bildet sich dabei eine zirkuläre Wartebeziehung so ist eine Verklemmung entstanden. 
-P1 besitzt Betriebsmittel B3 und benötigt B1. P2 hat Betriebsmittel B1 im Besitz und stellt die Anforderung an B2, welches schon von P3 belegt ist. P3 belegt B3 und fordert B1 an. Damit schließt sich der Kreis und es entsteht eine Verklemmung, da die vorhandenen Prozesse in einer zirkulären Wartebeziehung stehen. Hier in Abbildung \ref{fig:verklemmter_betriebsmittelbelegungsgraph} wird ein verklemmter Betriebsmittelbelegungsgraph dargestellt.
+Bildet sich dabei eine zirkuläre Wartebeziehung so ist eine Verklemmung entstanden.  In Abbildung \ref{fig:verklemmter_betriebsmittelbelegungsgraph} wird ein verklemmter Betriebsmittelbelegungsgraph dargestellt.
+P1 besitzt Betriebsmittel B3 und benötigt B1. P2 hat Betriebsmittel B1 im Besitz und stellt die Anforderung an B2, welches schon von P3 belegt ist. P3 belegt B3 und fordert B1 an. Damit schließt sich der Kreis und es entsteht eine Verklemmung, da die vorhandenen Prozesse in einer zirkulären Wartebeziehung stehen.
 
 \begin{figure}[H]
 \caption{Bei diesem Beispiel liegt eine Verklemmung vor}
@@ -42,7 +42,7 @@ P1 besitzt Betriebsmittel B3 und benötigt B1. P2 hat Betriebsmittel B1 im Besit
 \includegraphics[width=.4\linewidth]{Belegungsgraph2.png}
 \end{figure}
 
-Eine andere Möglichkeit, eine Verklemmung darzustellen, ist das Prozess-Ablaufdiagramm. Bei letzterem werden die Prozesse auf der x- bzw. y-Achse dargestellt und deren Rechnung als Linie. Verläuft die Linie in y-Richtung, so rechnet P1, verläuft sie in x-Richtung, rechnet P2. Die in dem Diagramm dargestellten ``Ecken'' symbolisieren die Änderung des Rechenvorgangs von P1 auf P2. Auf jeden der Achsen sind außerdem die angeforderten Betriebsmittel gekennzeichnet. Das rote Feld kennzeichnet die Spanne wann ein Betriebsmittel belegt wird. In diesen Bereich können die Prozesse nicht hinein.
+Eine andere Möglichkeit, eine Verklemmung darzustellen, ist das Prozess-Ablaufdiagramm. Bei letzterem werden die Prozesse auf der x- bzw. y-Achse dargestellt und deren Prozessfortschritt als Linie. Verläuft die Linie in y-Richtung, so rechnet P1, verläuft sie in x-Richtung, rechnet P2. Die in dem Diagramm dargestellten ``Ecken'' symbolisieren die Änderung des Rechenvorgangs von P1 auf P2. Auf jeden der Achsen sind außerdem die angeforderten Betriebsmittel gekennzeichnet. Das orangene Feld kennzeichnet die Spanne wann ein Betriebsmittel belegt wird. In diesen Bereich können die Prozesse nicht hinein.
 In Abbildung \ref{fig:normales_Ablaufdiagramm} wird ein normales Prozessablaufdiagramm ohne eine Verklemmung dargestellt.
 
 \begin{figure}[H]
@@ -52,8 +52,8 @@ In Abbildung \ref{fig:normales_Ablaufdiagramm} wird ein normales Prozessablaufdi
 \includegraphics[width=.6\linewidth]{Prozess_Ablaufdiagramm.png}
 \end{figure}
 
-Nun wird ein zweites Betriebsmittel dazugenommen. Wie gewohnt rechnen die Prozesse jedoch kann bei dem Beispiel \ref{fig:verklemmtes_ablaufdiagramm} eine Verklemmung entstehen. Die Zahlen 1-3 stellen mögliche Abläufe der Prozesse dar. Bei Ablauf 1 und 3 entsteht keine Verklemmung denn diese laufen jeweils links(1) und unterhalb(3) der gekennzeichneten Bereiche. Sie könne ungehindert rechnen denn sie belegen die Betriebsmittel aber lassen sie anschließend wieder frei. Ablauf 3 jedoch gerät in den kritischen Abschnitt bis sich dann schließlich eine Verklemmung visuallisiert. Verläuft die Linie des 3. Ablaufs weiter vertikal, so entsteht eine Verklemmung denn Betriebsmittel 1 ist bereits von Prozess 1 belegt. Lässt er Prozess 1 weiterrechnen so entsteht eine Verklemmung, denn Betriebsmittel 2 ist bereits von Prozess 2 schoon in Beschlag genommen. Zusammengefasst, betritt die Linie 3 den roten Bereich so ist eine Verklemmung unvermeidbar.
-Eine Verklemmung ist bei einem solchen Diagramm nur möglich, wenn sich die Bereiche (in dieser Abbildung orange und grün gekennzeichnet) der Betriebsmittel überschneiden.
+Nun wird ein zweites Betriebsmittel dazugenommen. Wie gewohnt rechnen die Prozesse jedoch kann bei dem Beispiel \ref{fig:verklemmtes_ablaufdiagramm} eine Verklemmung entstehen. Die Zahlen 1-3 stellen mögliche Abläufe der Prozesse dar. Bei Ablauf 1 und 3 entsteht keine Verklemmung denn diese laufen jeweils links(1) und unterhalb(3) der gekennzeichneten Bereiche. Sie können ungehindert rechnen, denn sie belegen die Betriebsmittel, aber lassen sie anschließend wieder frei. Ablauf 3 jedoch gerät in den kritischen Abschnitt bis sich dann schließlich eine Verklemmung erkennen lässt. Verläuft die Linie des 3. Ablaufs weiter vertikal, so entsteht eine Verklemmung denn Betriebsmittel 1 ist bereits von Prozess 1 belegt. Rechnet Prozess 1 weiter, so entsteht eine Verklemmung, denn Betriebsmittel 2 ist bereits von Prozess 2 bereits belegt ist. Zusammengefasst, betritt die Linie 3 den roten Bereich, so ist eine Verklemmung unvermeidbar.
+Eine Verklemmung ist bei einem solchen Diagramm nur möglich, wenn sich die Bereiche (in dieser Abbildung orange und grün gekennzeichnet) der Betriebsmittel so überschneiden, dass die Prozesse beide Betriebsmittel zur gleichen Zeit nutzen würden.
 
 \begin{figure}[H]
 \caption{Beispiel eines Prozessablaufdiagrammes mit Verklemmung}
@@ -65,10 +65,10 @@ Eine Verklemmung ist bei einem solchen Diagramm nur möglich, wenn sich die Bere
 \section{Lösungsansätze}
 \label{lösung}
 
-Eine der möglichen Lösungen besteht daraus, dass Problem zu ignorieren und einfach nichts zu tun. Das ist wahrlich eine sehr naive Lösung, die dennoch häufig benutzt wird. 
-Eine andere Lösung besteht darin, einen Kellner zu erschaffen, welcher die Regeln bzw. den Ablauf für die Tätigkeiten der Philosophen auf den Tisch legt. Die Reihenfolge der Tätigkeiten der Philosophen wird genau festgelegt. Bei dieser Lösung kann bei fünf Gabeln nur ein Philosoph essen.\parencite[vgl.][S.220]{tanenbaum2016}
+Eine der möglichen Lösungen besteht daraus, das Problem zu ignorieren und einfach nichts zu tun. Das ist wahrlich eine sehr naive Lösung, die dennoch häufig benutzt wird. 
+Eine andere Lösung besteht darin, eine vermittelnde Instanz zu erschaffen, welcher die Regeln bzw. den Ablauf für die Tätigkeiten der Philosophen auf den Tisch legt. Die Reihenfolge der Tätigkeiten der Philosophen wird genau festgelegt. Bei dieser Lösung kann bei fünf Gabeln nur ein Philosoph essen.\parencite[vgl.][S.220]{tanenbaum2016}
 
-Die sinnvollste Lösung für ein solches Problem folgende: Die Philosophen müssen fragen ob, die linke Gabel frei ist. Ist die linke Gabel nicht frei, so denkt er weiter. Ist die linke Gabel frei so fragt nach der rechten Gabel. Ist diese nicht frei, legt er die linke Gabel wieder hin und denkt weiter. Erst wenn auch die rechte Gabel frei ist kann der Philosoph essen. Diese Lösung ermöglicht laut Tanenbaum \glqq ein Maximum an Parallelität für eine beliebige Anzahl von Philosophen.''\parencite[S.222]{tanenbaum2016}
+Die sinnvollste Lösung für ein solches Problem ist folgende: Die Philosophen müssen fragen, ob die linke Gabel frei ist. Ist die linke Gabel nicht frei, so denkt er weiter. Ist die linke Gabel frei, so fragt er nach der rechten Gabel. Ist diese nicht frei, legt er die linke Gabel wieder hin und denkt weiter. Erst wenn auch die rechte Gabel frei ist kann der Philosoph essen. Diese Lösung ermöglicht laut Tanenbaum \glqq ein Maximum an Parallelität für eine beliebige Anzahl von Philosophen.''\parencite[S.222]{tanenbaum2016}
 
 
 
