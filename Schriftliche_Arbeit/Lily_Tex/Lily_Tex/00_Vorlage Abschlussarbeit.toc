@@ -23,10 +23,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.1}Erste Lösung mit Problemdarstellung}{14}{section.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Lösungen}{16}{section.4.2}%
+\contentsline {section}{\numberline {4.2}Lösungen}{17}{section.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Fazit}{18}{chapter.5}%
+\contentsline {chapter}{\numberline {5}Fazit}{19}{chapter.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Literatur}{19}{chapter*.6}%
+\contentsline {chapter}{\nonumberline Literatur}{20}{chapter*.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Materialienverzeichnis}{20}{chapter*.6}%
+\contentsline {chapter}{Materialienverzeichnis}{21}{chapter*.7}%

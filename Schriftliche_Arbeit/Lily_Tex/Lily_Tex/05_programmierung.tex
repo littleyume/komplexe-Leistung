@@ -5,7 +5,7 @@
 
 In diesem Kapitel soll die mögliche Programmierung des Modells der speisenden Philosophen mithilfe der Programmiersprache Python3 vorgestellt werden.
 
-In dem Programm werden die Bibliotheken \glqq Multiprocessing'' sowie \glqq random'' und \glqq time'' importiert. Die Klasse \glqq Philosophen'' erbt von der Klasse \glqq Process'' alle Funktionen und erhält zusätzlich die, die in der Klasse "Philosophen" definiert werden. Mit der Klasse \glqq Process'' kann ein Subprozess initiiert werden. Da sich die Philosophen über die gleichen Merkmale definieren können sie in einer Klasse zusammengefasst werden. Dem Konstruktor werden die Parameter \inline{name} sowie \inline{leftFork} und  \inline{rightFork} übergeben. Aus letzteren werden die Objekte leftFork und rightFork erzeugt. Diese stehen für die rechte sowie linke Gabel.
+In dem Programm werden die Bibliotheken \glqq Multiprocessing'' sowie \glqq random'' und \glqq time'' importiert. Die Klasse \glqq Philosophen'' erbt von der Klasse \glqq Process'' alle Funktionen und erhält zusätzlich die, die in der Klasse\glqq Philosophen'' definiert werden. Mit der Klasse \glqq Process'' kann ein Subprozess initiiert werden. Da sich die Philosophen über die gleichen Merkmale definieren können sie in einer Klasse zusammengefasst werden. Dem Konstruktor werden die Parameter \inline{name} sowie \inline{leftFork} und  \inline{rightFork} übergeben. Aus letzteren werden die Objekte leftFork und rightFork erzeugt. Diese stehen für die rechte sowie linke Gabel.
 
 \begin{lstlisting}[style = Python, label = {erste Lösung}, caption = {Klasse Philosophen}]
 
@@ -68,20 +68,54 @@ Nun der Lösungsansatz hierbei ist, dass die Gabeln durch einen RLock repräsent
 
 Um diesem Problem vorzubeugen kann man der \inline{aquire()}-Funktion über den Parameter \inline{blocking} ein True oder ein False mitgeben. Setzt man blocking auf True, so geht der Programmcode nicht weiter bis die Funktion ausgeführt ist, in diesem Fall wenn der Lock besetzt ist. Das heißt, will ein Prozess den Lock besetzen, so muss er immer wieder versuchen, diesen zu besetzen bis dieser wieder freigegeben ist. 
 
+\begin{lstlisting}[style = Python, label = {endloesung}, caption = {Endlösung}]
+
+    def run(self):
+        print("{} hat mit denken begonnen"
+        .format(current_process().name)) 
+        #Philosoph x hat mit denken begonnen
+        while True:
+            time.sleep(random.randint(1, 5))
+            print("{} ist fertig mit denken"
+            .format(current_process().name)) 
+            #Philosoph x ist bereit zum Essen
+
+            self.leftFork.acquire(True) 
+            #prozess x will den Lock belegen und muss es so lange versuchen bis er frei ist
+            time.sleep(random.randint(1, 5))
+            try:
+                print("{} hat die linke Gabel"
+                .format(current_process().name))
+
+                locked = self.rightFork.acquire(False) 
+                #Prozess x versucht nur einmal den lock zu besetzen
+                if locked:
+                    print("{} hat beide Gabeln, isst gerade"
+                    .format(current_process().name)) 
+                     #Prozess x hat beide Locks besetzt
+                    self.rightFork.release() 
+                    print("{} hat die rechte Gabel freigegeben"
+                    .format(current_process().name)) 
+                    self.leftFork.release() 
+                    print("{} hat die linke Gabel freigegeben"
+                    .format(current_process().name))
+                    #wenn Zustand = locked ist(die Philosophen gegessen haben), wird erst der Lock "rightFork" und dann Lock "leftFork" freigegeben
+                else:
+                    self.leftFork.release() 
+                    #wenn Zustand != locked, dann Lock "leftFork" frei geben(weil "rightFork" nicht frei war)
+                    print("{} hat die linke Gabel freigegeben"
+                    .format(current_process().name))  
+
+\end{lstlisting}
+
 %\begin{lstlisting}[style = Python, label = {mein_beispiel}, caption = {Das zeige ich euch}]
 
 
 
 %\end{lstlisting}
 
-%\begin{lstlisting}[style = Python, label = {mein_beispiel}, caption = {Das zeige ich euch}]
 
-
-
-%\end{lstlisting}
-
-
-Der Prozess wird immer wieder versuchen die linke Gabel zu belegen, bis diese freigegeben ist. Dann soll er versuchen die rechte Gabel zu erlangen. Da dieser RLock auf False gesetzt ist, wird er das nur einmal versuchen. Geprüft werden kann dies an der Variable \glqq locked''. Scheitert dieser Versuch, so ist der Prozess nicht auf \glqq locked'' gesetzt und die linke Gabel wird wieder freigeben. Ist der Zustand des RLock's auf locked, so ist der Versuch gelungen.  Der Philosoph hat nun beide Gabeln, kann essen, dann die rechte und zuletzt auch die linke Gabel wieder freigeben. Nun kann der nächste Prozess wieder versuchen den Lock zu ergattern.
+Der Prozess wird immer wieder versuchen die linke Gabel zu belegen, bis diese freigegeben ist. Dann soll er versuchen die rechte Gabel zu erlangen. Da dieser RLock auf False gesetzt ist, wird er das nur einmal versuchen. Zusammengefasst gibt es blockierende Funktionen, bei ihnen versucht der Prozess solange den Lock zu besetzen bis dieser frei ist und es gibt nichtblockierende Funktionen, welche nur einmal versuchen den Lock zu ergattern \parencite [vgl.][S.164]{sturm2001}. Geprüft werden kann dies an der Variable \glqq locked''. Scheitert dieser Versuch, so ist der Prozess nicht auf \glqq locked'' gesetzt und die linke Gabel wird wieder freigeben. Ist der Zustand des RLock's auf locked, so ist der Versuch gelungen.  Der Philosoph hat nun beide Gabeln, kann essen, dann die rechte und zuletzt auch die linke Gabel wieder freigeben. Nun kann der nächste Prozess wieder versuchen den Lock zu ergattern.
  
 
 

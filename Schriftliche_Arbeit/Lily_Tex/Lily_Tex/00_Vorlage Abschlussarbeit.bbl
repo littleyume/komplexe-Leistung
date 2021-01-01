@@ -19,6 +19,25 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global}
+    \entry{sleep}{online}{}
+      \field{sortinit}{t}
+      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{note}{Letzter Stand 29.12.2020, 11:01}
+      \field{title}{"time- Time access and conversions"}
+      \field{urlday}{29}
+      \field{urlmonth}{12}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb "https://docs.python.org/3/library/time.html"
+      \endverb
+      \verb{url}
+      \verb https://docs.python.org/3/library/time.html
+      \endverb
+    \endentry
     \entry{baun2017}{book}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=b7b5f257527a89babe711587b7a7fa25}{%
@@ -29,7 +48,7 @@
            givenun=0}}%
       }
       \list{location}{1}{%
-        {Berlin, Deutschland}%
+        {Berlin}%
       }
       \list{publisher}{1}{%
         {Springer-Verlag}%
@@ -113,12 +132,42 @@
       \verb https://www.pcwelt.de/news/Windows-10-Update-Bug-sorgt-fuer-hohe-CPU-Auslastung-10657717.html
       \endverb
     \endentry
+    \entry{mandl2020}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=47e8b22444711602d475276d04915188}{%
+           family={Mandl},
+           familyi={M\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Wiesbaden}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Vieweg}%
+      }
+      \strng{namehash}{47e8b22444711602d475276d04915188}
+      \strng{fullhash}{47e8b22444711602d475276d04915188}
+      \strng{bibnamehash}{47e8b22444711602d475276d04915188}
+      \strng{authorbibnamehash}{47e8b22444711602d475276d04915188}
+      \strng{authornamehash}{47e8b22444711602d475276d04915188}
+      \strng{authorfullhash}{47e8b22444711602d475276d04915188}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Grundkurs Betriebssysteme}
+      \field{year}{2020}
+    \endentry
     \entry{rechenberg2000}{book}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=4a8fc12c8983ca5947055f76fb1abd29}{%
+        {{un=0,uniquepart=base,hash=4e4bb4220076843868242021c6bfdece}{%
            family={Rechenberg},
            familyi={R\bibinitperiod},
-           given={Peter},
+           given={P.},
            giveni={P\bibinitperiod},
            givenun=0}}%
       }
@@ -128,12 +177,12 @@
       \list{publisher}{1}{%
         {Hanser}%
       }
-      \strng{namehash}{4a8fc12c8983ca5947055f76fb1abd29}
-      \strng{fullhash}{4a8fc12c8983ca5947055f76fb1abd29}
-      \strng{bibnamehash}{4a8fc12c8983ca5947055f76fb1abd29}
-      \strng{authorbibnamehash}{4a8fc12c8983ca5947055f76fb1abd29}
-      \strng{authornamehash}{4a8fc12c8983ca5947055f76fb1abd29}
-      \strng{authorfullhash}{4a8fc12c8983ca5947055f76fb1abd29}
+      \strng{namehash}{4e4bb4220076843868242021c6bfdece}
+      \strng{fullhash}{4e4bb4220076843868242021c6bfdece}
+      \strng{bibnamehash}{4e4bb4220076843868242021c6bfdece}
+      \strng{authorbibnamehash}{4e4bb4220076843868242021c6bfdece}
+      \strng{authornamehash}{4e4bb4220076843868242021c6bfdece}
+      \strng{authorfullhash}{4e4bb4220076843868242021c6bfdece}
       \field{sortinit}{R}
       \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
       \field{extradatescope}{labelyear}
@@ -145,33 +194,65 @@
     \endentry
     \entry{tanenbaum2016}{book}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=2414455c999bc471f803cd14fdea939d}{%
+        {{un=0,uniquepart=base,hash=84fa36bd80ca676798f114596c170d3a}{%
            family={Tanenbaum},
            familyi={T\bibinitperiod},
-           given={Andrew\bibnamedelima S},
-           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
            givenun=0}}%
       }
       \list{location}{1}{%
-        {Hallbergmoos, Deutschland}%
+        {Hallbergmoos}%
       }
       \list{publisher}{1}{%
         {Pearson}%
       }
-      \strng{namehash}{2414455c999bc471f803cd14fdea939d}
-      \strng{fullhash}{2414455c999bc471f803cd14fdea939d}
-      \strng{bibnamehash}{2414455c999bc471f803cd14fdea939d}
-      \strng{authorbibnamehash}{2414455c999bc471f803cd14fdea939d}
-      \strng{authornamehash}{2414455c999bc471f803cd14fdea939d}
-      \strng{authorfullhash}{2414455c999bc471f803cd14fdea939d}
+      \strng{namehash}{84fa36bd80ca676798f114596c170d3a}
+      \strng{fullhash}{84fa36bd80ca676798f114596c170d3a}
+      \strng{bibnamehash}{84fa36bd80ca676798f114596c170d3a}
+      \strng{authorbibnamehash}{84fa36bd80ca676798f114596c170d3a}
+      \strng{authornamehash}{84fa36bd80ca676798f114596c170d3a}
+      \strng{authorfullhash}{84fa36bd80ca676798f114596c170d3a}
       \field{sortinit}{T}
       \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{edition}{4}
       \field{title}{Moderne Betriebssysteme}
       \field{year}{2016}
+    \endentry
+    \entry{philosophers}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{sortinit}{W}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Letzter Stand 31.12.2020, 13:21}
+      \field{title}{Aufbau des Philosophenproblems}
+      \field{urlday}{31}
+      \field{urlmonth}{12}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb "https://de.wikipedia.org/wiki/Philosophenproblem"
+      \endverb
+      \verb{url}
+      \verb https://de.wikipedia.org/wiki/Philosophenproblem
+      \endverb
     \endentry
   \enddatalist
 \endrefsection

@@ -2193,10 +2193,14 @@
     <bcf:citekey order="8">baun2017</bcf:citekey>
     <bcf:citekey order="9">tanenbaum2016</bcf:citekey>
     <bcf:citekey order="10">tanenbaum2016</bcf:citekey>
-    <bcf:citekey order="11">tanenbaum2016</bcf:citekey>
-    <bcf:citekey order="12">tanenbaum2016</bcf:citekey>
-    <bcf:citekey order="13">mandl2020</bcf:citekey>
-    <bcf:citekey order="14">sleep</bcf:citekey>
+    <bcf:citekey order="11">philosophers</bcf:citekey>
+    <bcf:citekey order="12">philosophers</bcf:citekey>
+    <bcf:citekey order="13">baun2017</bcf:citekey>
+    <bcf:citekey order="14">tanenbaum2016</bcf:citekey>
+    <bcf:citekey order="15">tanenbaum2016</bcf:citekey>
+    <bcf:citekey order="16">mandl2020</bcf:citekey>
+    <bcf:citekey order="17">sleep</bcf:citekey>
+    <bcf:citekey order="18">sturm2001</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

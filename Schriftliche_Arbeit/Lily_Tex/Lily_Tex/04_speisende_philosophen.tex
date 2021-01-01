@@ -1,29 +1,23 @@
 \chapter{Die speisenden Philosophen}
 \label{speisende_philosophen}
-
-%Referenzen wie in \ref{fazit}
-
-%\begin{lstlisting}[style = Python, label = {mein_beispiel}, caption = {Das zeige ich euch}]
-%print("Hallo das ist mein Programm")
-
-%variable = true
-
-%if variable:
-%	print("Variable war true"!)
-
-%\end{lstlisting}
-
-%das ist ein test \parencite[S.4]{rechenberg2000}
 \section{Vorstellung des Modells}
 \label{vorstellung}
 Das 1965 von Dijkstra formulierte Philosophenproblem lässt sich wie folgt darstellen: Fünf Philosophen sitzen an einem runden Tisch. Jeder der Philosophen hat einen Teller mit Spagetti vor sich und weil die Nudeln so schlupfrig sind, benötigt man zwei Gabeln um sie zu essen. So liegt zwischen jedem Teller eine Gabel. Zusammengefasst gibt es nun fünf Teller mit den Spagetti und fünf Gabeln. Nun hat jeder Philosoph eine bestimmte Reihenfolge wie sie diese Tätigkeiten ausführen. Diese ist fest und unaustauschbar. Erst denken die Philosophen und weil Denken so hungrig macht, essen sie danach und heben erst die linke und dann die rechte Gabel auf. Dies kann auch lange gut gehen. Aber was passiet wenn alle Philosophen gleichzeitig hungrig sind und gleichzeitig nach der, von ihnen aus, linken Gabel greifen? Wenn jeder Philosoph nach seiner linken Gabel greift, hat keiner seine rechte Gabel. Also werden die Philosophen verhungern.\parencite[vgl.][S.220]{tanenbaum2016} 
 
+\begin{figure}[H]
+\caption{Modell \parencite{philosophers}}
+\label{fig:modell}
+\centering
+\includegraphics[width=.4\linewidth]{modell_dining_philosophers.png}
+\end{figure}
 
 Nun werden die Philosophen durch Prozesse ersetzt und die Gabeln durch Betriebsmittel und es kristalisiert sich eine Verklemmung heraus denn alle vier Bedingungen sind erfüllt. \textit{Mutual exclusion}, da die Philosophen nicht zur selben Zeit mit der gleichen Gabel essen können. \textit{Hold and wait}, da die Philosophen immer zuerst an sich denken und die Gabel keinem anderen überlassen. \textit{No preemption}, die Philosophen sind gebildete Leute mit Manieren. Sie reißen einem anderem keine Gabel aus der Hand. Weil die Philosophen an einem runden Tisch sitzen und jeder auf die rechte Gabel wartet wird auch das \textit{Zirkuläre Warten} erfüllt.
 
 \section{Darstellung des Problems}
 \label{problem}
-Um das Problem ausfindig zu machen, gibt es verschiedene Möglichkeiten eine Verklemmung grafisch darzustellen. Um das Problem besser auflösen zu können, muss es erst sichtbar gemacht werden. Vorgestellt wird zuerst der Betriebsmittelbelegungsgraph. Bei diesem werden die Prozesse mit Kreis und die Betriebsmittel mit Quadrat dargestellt. Diese werden ebenfalls als Knoten bezeichnet. Die Belegung und Anforderung auf Betriebsmittel wird mit Pfeilen, auch Kanten genannt, dargestellt. Kommt dabei der Pfeil von dem Betriebsmittel zu dem Prozess, so bedeutet das, dass der Prozess dieses schon im Besitz hat. Verläuft der Pfeil von Prozess zu Betriebsmittel so stellt der Prozess die Anforderung an das Betriebsmittel. Der Grundaufbau wird in Abbildung \ref{fig:normaler_betriebsmittelbelegungsgraph} gezeigt.
+Um das Problem ausfindig zu machen, gibt es verschiedene Möglichkeiten eine Verklemmung grafisch darzustellen. Um das Problem besser auflösen zu können, muss es erst sichtbar gemacht werden.
+
+Vorgestellt wird zuerst der Betriebsmittelbelegungsgraph. Bei diesem werden die Prozesse mit Kreis und die Betriebsmittel mit Quadrat dargestellt. Diese werden ebenfalls als Knoten bezeichnet. Die Belegung und Anforderung auf Betriebsmittel wird mit Pfeilen, auch Kanten genannt, dargestellt. Kommt dabei der Pfeil von dem Betriebsmittel zu dem Prozess, so bedeutet das, dass der Prozess dieses schon im Besitz hat. Verläuft der Pfeil von Prozess zu Betriebsmittel so stellt der Prozess die Anforderung an das Betriebsmittel. Der Grundaufbau wird in Abbildung \ref{fig:normaler_betriebsmittelbelegungsgraph} gezeigt.
 
 \begin{figure}[h]
 \caption{Normaler Betriebsmittelbelegungsgraph}
@@ -32,7 +26,7 @@ Um das Problem ausfindig zu machen, gibt es verschiedene Möglichkeiten eine Ver
 \includegraphics[width=.4\linewidth]{Belegungsgraph1.png}
 \end{figure}
 
-Bildet sich dabei eine zirkuläre Wartebeziehung so ist eine Verklemmung entstanden.  In Abbildung \ref{fig:verklemmter_betriebsmittelbelegungsgraph} wird ein verklemmter Betriebsmittelbelegungsgraph dargestellt.
+Bildet sich dabei eine zirkuläre Wartebeziehung so ist eine Verklemmung entstanden \parencite[vgl.][S. 197]{baun2017}.  In Abbildung \ref{fig:verklemmter_betriebsmittelbelegungsgraph} wird ein verklemmter Betriebsmittelbelegungsgraph dargestellt.
 P1 besitzt Betriebsmittel B3 und benötigt B1. P2 hat Betriebsmittel B1 im Besitz und stellt die Anforderung an B2, welches schon von P3 belegt ist. P3 belegt B3 und fordert B1 an. Damit schließt sich der Kreis und es entsteht eine Verklemmung, da die vorhandenen Prozesse in einer zirkulären Wartebeziehung stehen.
 
 \begin{figure}[H]
@@ -70,7 +64,7 @@ Eine andere Lösung besteht darin, eine vermittelnde Instanz zu erschaffen, welc
 
 Die sinnvollste Lösung für ein solches Problem ist folgende: Die Philosophen müssen fragen, ob die linke Gabel frei ist. Ist die linke Gabel nicht frei, so denkt er weiter. Ist die linke Gabel frei, so fragt er nach der rechten Gabel. Ist diese nicht frei, legt er die linke Gabel wieder hin und denkt weiter. Erst wenn auch die rechte Gabel frei ist kann der Philosoph essen. Diese Lösung ermöglicht laut Tanenbaum \glqq ein Maximum an Parallelität für eine beliebige Anzahl von Philosophen.''\parencite[S.222]{tanenbaum2016}
 
-Diese Lösung kann mithilfe von Sperren (engl. Lock) erreicht werden. Eine Sperre kann nur die Werte 1 oder 0 annehmen. Gilt der Wert der Sperre als 1, so ist diese belegt. Ist sie 0, dann nicht. Damit ein Prozess eine Sperre besetzen kann, so muss der Wert der Sperre 0 sein \parencite[vgl.][S.148]{mandl2020}.
+Diese Lösung kann mithilfe von Sperren (engl. Lock) erreicht werden. Eine Sperre kann nur die Werte 1 oder 0 annehmen. Gilt der Wert der Sperre als 1, so ist diese belegt. Ist sie 0, dann nicht. Damit ein Prozess eine Sperre besetzen kann, so muss der Wert der Sperre 0 sein\parencite[vgl.][S.148]{mandl2020}.
 
 
 
