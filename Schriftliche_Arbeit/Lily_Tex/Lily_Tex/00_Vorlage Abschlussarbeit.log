@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.9.13)  31 DEC 2020 14:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.9.13)  1 JAN 2021 15:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1089,28 +1089,21 @@ nput line 10.
 
 
 ] [15]
-Overfull \hbox (374.68655pt too wide) in paragraph at lines 48--50
+Overfull \hbox (70.87265pt too wide) in paragraph at lines 56--58
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (122.74332pt too wide) in paragraph at lines 54--56
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][] 
+[] 
  []
 
 [16]
-Overfull \hbox (174.61398pt too wide) in paragraph at lines 84--85
+Overfull \hbox (174.61398pt too wide) in paragraph at lines 86--87
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 [17]
-Overfull \hbox (559.93893pt too wide) in paragraph at lines 102--103
+Overfull \hbox (559.93893pt too wide) in paragraph at lines 104--105
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
@@ -1118,7 +1111,7 @@ Overfull \hbox (559.93893pt too wide) in paragraph at lines 102--103
  []
 
 
-Overfull \hbox (278.35532pt too wide) in paragraph at lines 105--106
+Overfull \hbox (278.35532pt too wide) in paragraph at lines 107--108
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
@@ -1135,12 +1128,6 @@ chapter 5.
 
 ]
 chapter without number
-
-Overfull \hbox (29.8883pt too wide) in paragraph at lines 140--140
-[][]\T1/lmr/m/n/12 J. Neh-mer, P. Sturm (2001). \T1/lmr/m/it/12 Grund-la-gen mo
--der-ner Bert-riebs-sys-te-me\T1/lmr/m/n/12 . Hei-del-berg: dpunkt.verlag. 
- []
-
 
 Overfull \hbox (2.51978pt too wide) in paragraph at lines 140--140
 [][]\T1/lmr/m/n/12 Kolokythas, Pa-na-gio-tis (2020). \T1/lmr/m/it/12 "Win-dows 
@@ -1186,10 +1173,10 @@ Package logreq Info: Writing requests to '"00_Vorlage Abschlussarbeit".run.xml'
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 156.
  ) 
 Here is how much of TeX's memory you used:
- 20953 strings out of 480608
- 365630 string characters out of 5905088
- 1187691 words of memory out of 5000000
- 36364 multiletter control sequences out of 15000+600000
+ 20963 strings out of 480608
+ 365801 string characters out of 5905088
+ 1187753 words of memory out of 5000000
+ 36371 multiletter control sequences out of 15000+600000
  587955 words of font info for 57 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  53i,12n,73p,10198b,3361s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1199,10 +1186,10 @@ lm/lmcsc10.pfb></app/texlive/texmf-dist/fonts/type1/public/lm/lmr12.pfb></app/t
 exlive/texmf-dist/fonts/type1/public/lm/lmri12.pfb></app/texlive/texmf-dist/fon
 ts/type1/public/lm/lmro12.pfb></app/texlive/texmf-dist/fonts/type1/public/lm/lm
 ssbx10.pfb></app/texlive/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on "00_Vorlage Abschlussarbeit.pdf" (22 pages, 1225614 bytes).
+Output written on "00_Vorlage Abschlussarbeit.pdf" (22 pages, 1227775 bytes).
 PDF statistics:
- 374 PDF objects out of 1000 (max. 8388607)
- 329 compressed objects within 4 object streams
- 135 named destinations out of 1000 (max. 500000)
+ 386 PDF objects out of 1000 (max. 8388607)
+ 341 compressed objects within 4 object streams
+ 138 named destinations out of 1000 (max. 500000)
  138 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -45,13 +45,15 @@ Die von der Klasse \glqq Process'' geerbte \inline run()} -Funktion wurde in das
                 self.rightFork.acquire() 
                 #Philosoph x hat die rechte Gabel
                 try:
-                    print("{} hat beide Gabeln, isst gerade".format(current_process().name)) #Philosoph x hat beide Gabeln
+                    print("{} hat beide Gabeln, isst gerade"
+                    .format(current_process().name)) 
+                    #Philosoph x hat beide Gabeln
 
                 finally:
                     self.rightFork.release()
                     print("{} hat die rechte Gabel freigegeben"
                     .format(current_process().name)) 
-                    #Philosoph ist fertg mit essen und gibt die rechte Gable wieder frei
+                    #Philosoph ist fertg mit essen und gibt die rechte Gable frei
 
             finally:
                 self.leftFork.release()
@@ -66,7 +68,7 @@ Nun der Lösungsansatz hierbei ist, dass die Gabeln durch einen RLock repräsent
 \section{Lösungen}
 \label{endlösung}
 
-Um diesem Problem vorzubeugen kann man der \inline{aquire()}-Funktion über den Parameter \inline{blocking} ein True oder ein False mitgeben. Setzt man blocking auf True, so geht der Programmcode nicht weiter bis die Funktion ausgeführt ist, in diesem Fall wenn der Lock besetzt ist. Das heißt, will ein Prozess den Lock besetzen, so muss er immer wieder versuchen, diesen zu besetzen bis dieser wieder freigegeben ist. 
+Um diesem Problem vorzubeugen kann man der \inline{aquire()}-Funktion über den Parameter \inline{blocking} ein True oder ein False mitgeben. Setzt man blocking auf True, so geht der Programmcode nicht weiter bis die Funktion ausgeführt ist, in diesem Fall wenn der Lock besetzt ist. Das heißt, will ein Prozess den Lock besetzen, so muss er immer wieder versuchen, diesen zu besetzen bis dieser wieder freigegeben ist \parencite[vgl. ]{lock}. 
 
 \begin{lstlisting}[style = Python, label = {endloesung}, caption = {Endlösung}]
 
@@ -115,7 +117,7 @@ Um diesem Problem vorzubeugen kann man der \inline{aquire()}-Funktion über den 
 %\end{lstlisting}
 
 
-Der Prozess wird immer wieder versuchen die linke Gabel zu belegen, bis diese freigegeben ist. Dann soll er versuchen die rechte Gabel zu erlangen. Da dieser RLock auf False gesetzt ist, wird er das nur einmal versuchen. Zusammengefasst gibt es blockierende Funktionen, bei ihnen versucht der Prozess solange den Lock zu besetzen bis dieser frei ist und es gibt nichtblockierende Funktionen, welche nur einmal versuchen den Lock zu ergattern \parencite [vgl.][S.164]{sturm2001}. Geprüft werden kann dies an der Variable \glqq locked''. Scheitert dieser Versuch, so ist der Prozess nicht auf \glqq locked'' gesetzt und die linke Gabel wird wieder freigeben. Ist der Zustand des RLock's auf locked, so ist der Versuch gelungen.  Der Philosoph hat nun beide Gabeln, kann essen, dann die rechte und zuletzt auch die linke Gabel wieder freigeben. Nun kann der nächste Prozess wieder versuchen den Lock zu ergattern.
+Der Prozess wird immer wieder versuchen die linke Gabel zu belegen, bis diese freigegeben ist. Dann soll er versuchen die rechte Gabel zu erlangen. Da dieser RLock auf False gesetzt ist, wird er das nur einmal versuchen\parencite[vgl. ]{lock}. Zusammengefasst gibt es blockierende Funktionen, bei ihnen versucht der Prozess solange den Lock zu besetzen bis dieser frei ist und es gibt nichtblockierende Funktionen, welche nur einmal versuchen den Lock zu ergattern \parencite [vgl.][S.164]{sturm2001}. Geprüft werden kann dies an der Variable \glqq locked''. Scheitert dieser Versuch, so ist der Prozess nicht auf \glqq locked'' gesetzt und die linke Gabel wird wieder freigeben. Ist der Zustand des RLock's auf locked, so ist der Versuch gelungen.  Der Philosoph hat nun beide Gabeln, kann essen, dann die rechte und zuletzt auch die linke Gabel wieder freigeben. Nun kann der nächste Prozess wieder versuchen den Lock zu ergattern.
  
 
 

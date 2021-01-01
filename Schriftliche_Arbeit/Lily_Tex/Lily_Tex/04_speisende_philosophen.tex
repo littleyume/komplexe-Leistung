@@ -59,14 +59,15 @@ Eine Verklemmung ist bei einem solchen Diagramm nur möglich, wenn sich die Bere
 \section{Lösungsansätze}
 \label{lösung}
 
-Eine der möglichen Lösungen besteht daraus, das Problem zu ignorieren und einfach nichts zu tun. Das ist wahrlich eine sehr naive Lösung, die dennoch häufig benutzt wird. 
-Eine andere Lösung besteht darin, eine vermittelnde Instanz zu erschaffen, welcher die Regeln bzw. den Ablauf für die Tätigkeiten der Philosophen auf den Tisch legt. Die Reihenfolge der Tätigkeiten der Philosophen wird genau festgelegt. Bei dieser Lösung kann bei fünf Gabeln nur ein Philosoph essen.\parencite[vgl.][S.220]{tanenbaum2016}
+Eine der möglichen Lösungen besteht daraus, das Problem zu ignorieren und einfach nichts zu tun. Das ist wahrlich eine sehr naive Lösung, die dennoch häufig benutzt wird, da sie ohne Aufwand für den laufenden Betrieb ist \parencite[vgl. ][S.79]{mandl2020} . Bei dieser Lösung darf auf das Ergebniss der verklemmten Prozesse kein Wert gelegt werden.
+ 
+Zur Vermeidung einer Verklemmung gibt es ebenfalls viele Möglichkeiten. Diese sind jedoch oftmals sehr  aufwendig. Eine Lösung besteht darin, eine vermittelnde Instanz zu erschaffen, welcher die Regeln bzw. den Ablauf für die Tätigkeiten der Philosophen auf den Tisch legt. Die Reihenfolge der Tätigkeiten der Philosophen wird genau festgelegt. Bei dieser Lösung kann bei fünf Gabeln nur ein Philosoph essen.\parencite[vgl.][S.220]{tanenbaum2016}
 
 Die sinnvollste Lösung für ein solches Problem ist folgende: Die Philosophen müssen fragen, ob die linke Gabel frei ist. Ist die linke Gabel nicht frei, so denkt er weiter. Ist die linke Gabel frei, so fragt er nach der rechten Gabel. Ist diese nicht frei, legt er die linke Gabel wieder hin und denkt weiter. Erst wenn auch die rechte Gabel frei ist kann der Philosoph essen. Diese Lösung ermöglicht laut Tanenbaum \glqq ein Maximum an Parallelität für eine beliebige Anzahl von Philosophen.''\parencite[S.222]{tanenbaum2016}
 
 Diese Lösung kann mithilfe von Sperren (engl. Lock) erreicht werden. Eine Sperre kann nur die Werte 1 oder 0 annehmen. Gilt der Wert der Sperre als 1, so ist diese belegt. Ist sie 0, dann nicht. Damit ein Prozess eine Sperre besetzen kann, so muss der Wert der Sperre 0 sein\parencite[vgl.][S.148]{mandl2020}.
 
-
+Die Verklemmung kann allerdings auch von vornherein verhindert werden, indem das Eintreten der verklemmungsnotwenigen Bedingungen verhindert wird. Auch diese Lösung ist sehr aufwendig \parencite[vgl. ][S.79]{mandl2020}.
 
 
 

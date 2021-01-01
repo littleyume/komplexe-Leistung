@@ -1,17 +1,17 @@
 [0] Config.pm:304> INFO - This is Biber 2.14
 [0] Config.pm:307> INFO - Logfile is '00_Vorlage Abschlussarbeit.blg'
-[94] biber:322> INFO - === Do Dez 31, 2020, 14:41:11
-[111] Biber.pm:415> INFO - Reading '00_Vorlage Abschlussarbeit.bcf'
-[210] Biber.pm:943> INFO - Found 8 citekeys in bib section 0
-[228] Biber.pm:4256> INFO - Processing section 0
-[229] Utils.pm:75> INFO - Globbing data source 'biblio.bib'
-[229] Utils.pm:91> INFO - Globbed data source 'biblio.bib' to biblio.bib
-[241] Biber.pm:4455> INFO - Looking for bibtex format file 'biblio.bib' for section 0
-[242] bibtex.pm:1653> INFO - LaTeX decoding ...
-[255] bibtex.pm:1471> INFO - Found BibTeX data source 'biblio.bib'
-[325] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[325] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[325] Biber.pm:4084> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'de-DE'
-[325] Biber.pm:4090> INFO - No sort tailoring available for locale 'de-DE'
-[338] bbl.pm:652> INFO - Writing '00_Vorlage Abschlussarbeit.bbl' with encoding 'UTF-8'
-[342] bbl.pm:755> INFO - Output to 00_Vorlage Abschlussarbeit.bbl
+[74] biber:322> INFO - === Fr Jan  1, 2021, 15:34:24
+[84] Biber.pm:415> INFO - Reading '00_Vorlage Abschlussarbeit.bcf'
+[144] Biber.pm:943> INFO - Found 9 citekeys in bib section 0
+[155] Biber.pm:4256> INFO - Processing section 0
+[156] Utils.pm:75> INFO - Globbing data source 'biblio.bib'
+[156] Utils.pm:91> INFO - Globbed data source 'biblio.bib' to biblio.bib
+[163] Biber.pm:4455> INFO - Looking for bibtex format file 'biblio.bib' for section 0
+[164] bibtex.pm:1653> INFO - LaTeX decoding ...
+[172] bibtex.pm:1471> INFO - Found BibTeX data source 'biblio.bib'
+[216] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[216] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[216] Biber.pm:4084> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'de-DE'
+[216] Biber.pm:4090> INFO - No sort tailoring available for locale 'de-DE'
+[224] bbl.pm:652> INFO - Writing '00_Vorlage Abschlussarbeit.bbl' with encoding 'UTF-8'
+[227] bbl.pm:755> INFO - Output to 00_Vorlage Abschlussarbeit.bbl
