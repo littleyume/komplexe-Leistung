@@ -53,13 +53,14 @@ Die von der Klasse \glqq Process'' geerbte \inline run()} -Funktion wurde in das
                     self.rightFork.release()
                     print("{} hat die rechte Gabel freigegeben"
                     .format(current_process().name)) 
-                    #Philosoph ist fertg mit essen und gibt die rechte Gable frei
+                    #Philosoph ist fertg mit essen und 
+                    #gibt die rechte Gabel frei
 
             finally:
                 self.leftFork.release()
                 print("{} hat die linke Gabel freigegeben"
                 .format(current_process().name)) 
-                #Philosoph x hat gibt die linkte Gabel frei
+                #Philosoph x hat gibt die linke Gabel frei
 
 \end{lstlisting}
 
@@ -83,7 +84,8 @@ Um diesem Problem vorzubeugen kann man der \inline{aquire()}-Funktion über den 
             #Philosoph x ist bereit zum Essen
 
             self.leftFork.acquire(True) 
-            #prozess x will den Lock belegen und muss es so lange versuchen bis er frei ist
+            #prozess x will den Lock belegen und muss es so 
+            #lange versuchen bis er frei ist
             time.sleep(random.randint(1, 5))
             try:
                 print("{} hat die linke Gabel"
@@ -101,10 +103,13 @@ Um diesem Problem vorzubeugen kann man der \inline{aquire()}-Funktion über den 
                     self.leftFork.release() 
                     print("{} hat die linke Gabel freigegeben"
                     .format(current_process().name))
-                    #wenn Zustand = locked ist(die Philosophen gegessen haben), wird erst der Lock "rightFork" und dann Lock "leftFork" freigegeben
+                    #wenn Zustand = locked ist(die Philosophen 
+                    #gegessen haben), wird erst der Lock "rightFork" 
+                    #und dann Lock "leftFork" freigegeben
                 else:
                     self.leftFork.release() 
-                    #wenn Zustand != locked, dann Lock "leftFork" frei geben(weil "rightFork" nicht frei war)
+                    #wenn Zustand != locked, dann Lock "leftFork" frei 
+                    #geben(weil "rightFork" nicht frei war)
                     print("{} hat die linke Gabel freigegeben"
                     .format(current_process().name))  
 
@@ -117,7 +122,7 @@ Um diesem Problem vorzubeugen kann man der \inline{aquire()}-Funktion über den 
 %\end{lstlisting}
 
 
-Der Prozess wird immer wieder versuchen die linke Gabel zu belegen, bis diese freigegeben ist. Dann soll er versuchen die rechte Gabel zu erlangen. Da dieser RLock auf False gesetzt ist, wird er das nur einmal versuchen\parencite[vgl. ]{lock}. Zusammengefasst gibt es blockierende Funktionen, bei ihnen versucht der Prozess solange den Lock zu besetzen bis dieser frei ist und es gibt nichtblockierende Funktionen, welche nur einmal versuchen den Lock zu ergattern \parencite [vgl.][S.164]{sturm2001}. Geprüft werden kann dies an der Variable \glqq locked''. Scheitert dieser Versuch, so ist der Prozess nicht auf \glqq locked'' gesetzt und die linke Gabel wird wieder freigeben. Ist der Zustand des RLock's auf locked, so ist der Versuch gelungen.  Der Philosoph hat nun beide Gabeln, kann essen, dann die rechte und zuletzt auch die linke Gabel wieder freigeben. Nun kann der nächste Prozess wieder versuchen den Lock zu ergattern.
+Der Prozess wird immer wieder versuchen die linke Gabel zu belegen, bis diese freigegeben ist. Dann soll er versuchen die rechte Gabel zu erlangen. Da dieser RLock auf False gesetzt ist, wird er das nur einmal versuchen\parencite[vgl.]{lock}. Zusammengefasst gibt es blockierende Funktionen, bei ihnen versucht der Prozess solange den Lock zu besetzen bis dieser frei ist und es gibt nichtblockierende Funktionen, welche nur einmal versuchen den Lock zu ergattern \parencite [vgl.][S.164]{sturm2001}. Geprüft werden kann dies an der Variable \glqq locked''. Scheitert dieser Versuch, so ist der Prozess nicht auf \glqq locked'' gesetzt und die linke Gabel wird wieder freigeben. Ist der Zustand des RLock's auf locked, so ist der Versuch gelungen.  Der Philosoph hat nun beide Gabeln, kann essen, dann die rechte und zuletzt auch die linke Gabel wieder freigeben. Nun kann der nächste Prozess wieder versuchen den Lock zu ergattern.
  
 
 

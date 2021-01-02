@@ -3,30 +3,30 @@
 \defcounter {refsection}{0}\relax 
 \def \@dotsep {500}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {1}Einleitung}{3}{chapter.1}%
+\contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Grundlagen}{5}{chapter.2}%
+\contentsline {chapter}{\numberline {2}Grundlagen}{3}{chapter.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Erklärende Begriffe}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.1}Erklärende Begriffe}{3}{section.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Begriff Verklemmungen}{6}{section.2.2}%
+\contentsline {section}{\numberline {2.2}Begriff Verklemmungen}{4}{section.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Die speisenden Philosophen}{8}{chapter.3}%
+\contentsline {chapter}{\numberline {3}Die speisenden Philosophen}{6}{chapter.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Vorstellung des Modells}{8}{section.3.1}%
+\contentsline {section}{\numberline {3.1}Vorstellung des Modells}{6}{section.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Darstellung des Problems}{9}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Darstellung des Problems}{7}{section.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Lösungsansätze}{12}{section.3.3}%
+\contentsline {section}{\numberline {3.3}Lösungsansätze}{10}{section.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Programmierung}{14}{chapter.4}%
+\contentsline {chapter}{\numberline {4}Programmierung}{12}{chapter.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Erste Lösung mit Problemdarstellung}{14}{section.4.1}%
+\contentsline {section}{\numberline {4.1}Erste Lösung mit Problemdarstellung}{12}{section.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Lösungen}{17}{section.4.2}%
+\contentsline {section}{\numberline {4.2}Lösungen}{15}{section.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Fazit}{19}{chapter.5}%
+\contentsline {chapter}{\numberline {5}Fazit}{18}{chapter.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Literatur}{20}{chapter*.7}%
+\contentsline {chapter}{\nonumberline Literatur}{II}{chapter*.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Materialienverzeichnis}{21}{chapter*.7}%
+\contentsline {chapter}{Materialienverzeichnis}{III}{chapter*.7}%

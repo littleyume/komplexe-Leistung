@@ -109,7 +109,7 @@
 \pagestyle{empty}
 
 \include{01_titel}
-
+\pagenumbering{Roman}
 % Beendet eine Seite und erzwingt auf den nachfolgenden Seiten die Ausgabe aller Gleitobjekte (z.B. Abbildungen), die bislang definiert, aber noch nicht ausgegeben wurden. Dieser Befehl fügt, falls nötig, eine leere Seite ein, sodaß die nächste Seite nach den Gleitobjekten eine ungerade Seitennummer hat. 
 \cleardoubleoddpage
 
@@ -128,6 +128,9 @@
 %Inhaltsverzeichnis
 \tableofcontents
 
+\newcounter{savepage}
+\setcounter{savepage}{\arabic{page}}
+\cleardoublepage\pagenumbering{arabic}
 
 
 \include{02_einleitung}
@@ -136,7 +139,10 @@
 \include{05_programmierung}
 \include{06_fazit}
 
+\pagestyle{empty}
 
+\pagenumbering{Roman}
+\setcounter{page}{2}
 \printbibliography[heading=bibintoc]
 
 
@@ -150,7 +156,5 @@
 \renewcommand\@dotsep{10000}
 \makeatother
 \listoffigures
-
-\listoftables
 
 \end{document}

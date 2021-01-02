@@ -1,8 +1,10 @@
 \chapter{Fazit}
 \label{fazit}
 
-Zusammenfassend muss gesagt werden, dass eine Verklemmung (= Deadlock) nur unter 4 Bedingungen entstehen kann. Sie kann unter dem Modell der speisenden Philosophen veranschaulicht werden. Es gibt verschiedene Arten eine Verklemmung zu visualisieren wie zum Beispiel den Betriebsmittelbelegungsgraph. Dabei gibt es auch verschiedene Möglichkeiten auf eine Verklemmung zu reagieren. 
+Zusammenfassend muss gesagt werden, dass eine Verklemmung (= Deadlock) nur unter vier Bedingungen entstehen kann. Sie kann unter dem Modell der speisenden Philosophen veranschaulicht werden. Es gibt verschiedene Arten eine Verklemmung zu visualisieren, wie zum Beispiel der Betriebsmittelbelegungsgraph. Dabei gibt es auch verschiedene Möglichkeiten auf eine Verklemmung zu reagieren. 
 
-Zum einen das Ignorieren des Problems, wobei auf das Resultat der verklemmten Prozesse verzichtet werden muss, das Erkennen und Beseitigen der Verklemmungen, die Vermeidung sowie den Ausschluss einer Verklemmung, indem der Eintritt einer der 4 Bedingungen verhindert wird.
-In dieser Arbeit wurde ein Beispielprogramm zur Vermeidung einer Verklemmung programmiert. Wobei zur Lösung die Gabeln durch einen Lock repräsentiert wurden. Erfolgt allerdings der Prozesswechsel in diesem Programm, genau dann wenn der zweite Lock zwar frei geworden ist, aber ein anderer Prozess ihn noch \glqq wegschnappt'', so wird es trotzallem zu einem Deadlock kommen da dann trotzdem jeder Prozess nur einen statt beide Locks besetzt haben. Um dies zu vermeiden, muss ein kritischer Abschnitt geschaffen und geschützt werden. Dies lässt sich durch einen Mutex Semaphor realisieren.
-Abschließend muss gesagt werden, dass sich zur Lösung des Philosophenproblems generell genauso gut Mutex Semaphoren statt Locks eignen.
+?????????????Zum einen das Ignorieren des Problems, wobei durch das verklemmen der Prozesse diese nicht terminieren, das Erkennen und Beseitigen der Verklemmungen, die Vermeidung sowie den Ausschluss einer Verklemmung, indem der Eintritt einer der vier Bedingungen verhindert wird.????????????????????
+
+Es gab naive Lösungsansätze, die zumindest nicht verklemmen, allerdings..... Verlieren Effekt von paralleler Programmierung.... Vermittler und Mutex für gabeln und essen.
+
+Arbeit unter betracht einprozessorsystem wie in \ref{sec:begriffe} \nameref{sec:begriffe}  dargestellt wurde1, mittlerweile mehrprozessorsystem, selbes prinzip
