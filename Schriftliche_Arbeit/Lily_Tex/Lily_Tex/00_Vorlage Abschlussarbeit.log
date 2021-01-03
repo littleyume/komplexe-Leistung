@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.9.13)  2 JAN 2021 21:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.9.13)  3 JAN 2021 12:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1040,7 +1040,7 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
 (./04_speisende_philosophen.tex
 chapter 3.
-<img/modell_dining_philosophers.png, id=85, 1134.2375pt x 1176.395pt>
+<img/modell_dining_philosophers.png, id=87, 1134.2375pt x 1176.395pt>
 File: img/modell_dining_philosophers.png Graphic file (type png)
 <use img/modell_dining_philosophers.png>
 Package pdftex.def Info: img/modell_dining_philosophers.png  used on input line
@@ -1051,12 +1051,12 @@ Package pdftex.def Info: img/modell_dining_philosophers.png  used on input line
 
 
 ] [7 <./img/modell_dining_philosophers.png (PNG copy)>]
-<img/Belegungsgraph1.png, id=97, 302.12875pt x 81.30376pt>
+<img/Belegungsgraph1.png, id=99, 302.12875pt x 81.30376pt>
 File: img/Belegungsgraph1.png Graphic file (type png)
 <use img/Belegungsgraph1.png>
 Package pdftex.def Info: img/Belegungsgraph1.png  used on input line 26.
 (pdftex.def)             Requested size: 182.09486pt x 49.0022pt.
-<img/Belegungsgraph2.png, id=101, 362.35374pt x 342.27875pt>
+<img/Belegungsgraph2.png, id=103, 362.35374pt x 342.27875pt>
 File: img/Belegungsgraph2.png Graphic file (type png)
 <use img/Belegungsgraph2.png>
 Package pdftex.def Info: img/Belegungsgraph2.png  used on input line 36.
@@ -1068,14 +1068,14 @@ en, ist das Prozess-Ablaufdiagramm.
  []
 
 [8 <./img/Belegungsgraph1.png> <./img/Belegungsgraph2.png>]
-<img/Prozess_Ablaufdiagramm.png, id=111, 386.44376pt x 343.2825pt>
+<img/Prozess_Ablaufdiagramm.png, id=113, 386.44376pt x 343.2825pt>
 File: img/Prozess_Ablaufdiagramm.png Graphic file (type png)
 <use img/Prozess_Ablaufdiagramm.png>
 Package pdftex.def Info: img/Prozess_Ablaufdiagramm.png  used on input line 46.
 
 (pdftex.def)             Requested size: 273.14923pt x 242.64275pt.
  [9 <./img/Prozess_Ablaufdiagramm.png>]
-<img/prozessablaufdiagramm2.png, id=120, 396.48125pt x 363.3575pt>
+<img/prozessablaufdiagramm2.png, id=122, 396.48125pt x 363.3575pt>
 File: img/prozessablaufdiagramm2.png Graphic file (type png)
 <use img/prozessablaufdiagramm2.png>
 Package pdftex.def Info: img/prozessablaufdiagramm2.png  used on input line 56.
@@ -1102,18 +1102,20 @@ nput line 10.
 
  (./06_fazit.tex
 chapter 5.
+
+LaTeX Warning: Reference `sec:Lösungsansätze' on page 18 undefined on input l
+ine 8.
+
+
+LaTeX Warning: Reference `sec:Lösungansätze' on page 18 undefined on input li
+ne 8.
+
 ) [18
 
 
 
 ]
 chapter without number
-
-Overfull \hbox (2.51978pt too wide) in paragraph at lines 146--146
-[][]\T1/lmr/m/n/12 Kolokythas, Pa-na-gio-tis (2020). \T1/lmr/m/it/12 "Win-dows 
-10: Update-Bug sorgt f�r ho-he CPU-Auslastung"\T1/lmr/m/n/12 .
- []
-
 [2
 
 
@@ -1138,6 +1140,9 @@ anged.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
 Package logreq Info: Writing requests to '"00_Vorlage Abschlussarbeit".run.xml'
@@ -1148,22 +1153,22 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 160.
  ) 
 Here is how much of TeX's memory you used:
  20962 strings out of 480608
- 365729 string characters out of 5905088
- 1189862 words of memory out of 5000000
- 36370 multiletter control sequences out of 15000+600000
+ 365783 string characters out of 5905088
+ 1192026 words of memory out of 5000000
+ 36367 multiletter control sequences out of 15000+600000
  587955 words of font info for 57 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 53i,12n,73p,10198b,3361s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,12n,73p,10198b,3359s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/app/texlive/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</app/texlive/texmf-dis
 t/fonts/type1/public/lm/lmbx12.pfb></app/texlive/texmf-dist/fonts/type1/public/
 lm/lmcsc10.pfb></app/texlive/texmf-dist/fonts/type1/public/lm/lmr12.pfb></app/t
 exlive/texmf-dist/fonts/type1/public/lm/lmri12.pfb></app/texlive/texmf-dist/fon
 ts/type1/public/lm/lmro12.pfb></app/texlive/texmf-dist/fonts/type1/public/lm/lm
 ssbx10.pfb></app/texlive/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on "00_Vorlage Abschlussarbeit.pdf" (22 pages, 1227631 bytes).
+Output written on "00_Vorlage Abschlussarbeit.pdf" (22 pages, 1229674 bytes).
 PDF statistics:
- 392 PDF objects out of 1000 (max. 8388607)
- 347 compressed objects within 4 object streams
- 141 named destinations out of 1000 (max. 500000)
+ 401 PDF objects out of 1000 (max. 8388607)
+ 356 compressed objects within 4 object streams
+ 144 named destinations out of 1000 (max. 500000)
  138 words of extra memory for PDF output out of 10000 (max. 10000000)
 

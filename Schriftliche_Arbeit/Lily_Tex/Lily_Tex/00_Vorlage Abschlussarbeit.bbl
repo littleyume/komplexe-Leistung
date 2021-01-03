@@ -19,44 +19,6 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global}
-    \entry{sleep}{online}{}
-      \field{sortinit}{t}
-      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
-      \field{labeltitlesource}{title}
-      \field{note}{Letzter Stand 29.12.2020, 11:01}
-      \field{title}{"time- Time access and conversions"}
-      \field{urlday}{29}
-      \field{urlmonth}{12}
-      \field{urlyear}{2020}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb "https://docs.python.org/3/library/time.html"
-      \endverb
-      \verb{url}
-      \verb https://docs.python.org/3/library/time.html
-      \endverb
-    \endentry
-    \entry{lock}{online}{}
-      \field{sortinit}{t}
-      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
-      \field{labeltitlesource}{title}
-      \field{note}{Letzter Stand 27.12.2020, 10:16}
-      \field{title}{"treading-Thread-based parallelism"}
-      \field{urlday}{22}
-      \field{urlmonth}{11}
-      \field{urlyear}{2020}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb "https://docs.python.org/3/library/threading.html"
-      \endverb
-      \verb{url}
-      \verb https://docs.python.org/3/library/threading.html
-      \endverb
-    \endentry
     \entry{baun2017}{book}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=b7b5f257527a89babe711587b7a7fa25}{%
@@ -87,6 +49,36 @@
       \field{edition}{2}
       \field{title}{Betriebssysteme kompakt}
       \field{year}{2017}
+    \endentry
+    \entry{sommer2002}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c76295dae9d9ca4440bcacb98791e80d}{%
+           family={H.-P.\bibnamedelimi Gumm},
+           familyi={H\bibinithyphendelim P\bibinitperiod\bibinitdelim G\bibinitperiod},
+           given={M.\bibnamedelimi Sommer},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {München}%
+      }
+      \list{publisher}{1}{%
+        {R. Oldenbourg Wissenschaftsverlag}%
+      }
+      \strng{namehash}{c76295dae9d9ca4440bcacb98791e80d}
+      \strng{fullhash}{c76295dae9d9ca4440bcacb98791e80d}
+      \strng{bibnamehash}{c76295dae9d9ca4440bcacb98791e80d}
+      \strng{authorbibnamehash}{c76295dae9d9ca4440bcacb98791e80d}
+      \strng{authornamehash}{c76295dae9d9ca4440bcacb98791e80d}
+      \strng{authorfullhash}{c76295dae9d9ca4440bcacb98791e80d}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Einführung in die Informatik}
+      \field{year}{2002}
     \endentry
     \entry{sturm2001}{book}{}
       \name{author}{1}{}{%
@@ -141,13 +133,13 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{Letzter Stand 22.11.2020, 15:02}
-      \field{title}{"Windows 10: Update-Bug sorgt für hohe CPU-Auslastung"}
+      \field{title}{Windows 10: Update-Bug sorgt für hohe CPU-Auslastung}
       \field{urlday}{22}
       \field{urlmonth}{11}
       \field{urlyear}{2020}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb "https://www.pcwelt.de/news/Windows-10-Update-Bug-sorgt-fuer-hohe-CPU-Auslastung-10657717.html"
+      \verb https://www.pcwelt.de/news/Windows-10-Update-Bug-sorgt-fuer-hohe-CPU-Auslastung-10657717.html
       \endverb
       \verb{url}
       \verb https://www.pcwelt.de/news/Windows-10-Update-Bug-sorgt-fuer-hohe-CPU-Auslastung-10657717.html
@@ -183,6 +175,25 @@
       \field{edition}{5}
       \field{title}{Grundkurs Betriebssysteme}
       \field{year}{2020}
+    \endentry
+    \entry{lock}{online}{}
+      \field{sortinit}{m}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{note}{Letzter Stand 27.12.2020, 10:16}
+      \field{title}{multiprocessing- Process-based parallelism}
+      \field{urlday}{22}
+      \field{urlmonth}{11}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.python.org/3/library/multiprocessing.html
+      \endverb
+      \verb{url}
+      \verb https://docs.python.org/3/library/multiprocessing.html
+      \endverb
     \endentry
     \entry{rechenberg2000}{book}{}
       \name{author}{1}{}{%
@@ -244,6 +255,25 @@
       \field{edition}{4}
       \field{title}{Moderne Betriebssysteme}
       \field{year}{2016}
+    \endentry
+    \entry{sleep}{online}{}
+      \field{sortinit}{t}
+      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{note}{Letzter Stand 29.12.2020, 11:01}
+      \field{title}{time- Time access and conversions}
+      \field{urlday}{29}
+      \field{urlmonth}{12}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.python.org/3/library/time.html
+      \endverb
+      \verb{url}
+      \verb https://docs.python.org/3/library/time.html
+      \endverb
     \endentry
     \entry{philosophers}{online}{}
       \name{author}{1}{}{%
