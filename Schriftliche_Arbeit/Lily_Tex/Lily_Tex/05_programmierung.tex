@@ -3,7 +3,7 @@
 \section{Erste Lösung mit Problemdarstellung}
 \label{erste_lösung}
 
-In diesem Kapitel soll die mögliche Programmierung des Modells der speisenden Philosophen mithilfe der Programmiersprache Python3 vorgestellt werden.
+In diesem Kapitel soll die mögliche Programmierung des Modells der speisenden Philosophen mithilfe der Programmiersprache Python3 vorgestellt werden. Das Programm wurde in Sinnabschnitte geteilt und abschnittsweise beschrieben.
 
 In dem Programm werden die Bibliotheken \glqq Multiprocessing'' sowie \glqq random'' und \glqq time'' importiert. Die Klasse \glqq Philosophen'' erbt von der Klasse \glqq Process'' alle Funktionen und erhält zusätzlich die, die in der Klasse \glqq Philosophen'' definiert werden. Mit der Klasse \glqq Process'' kann ein Subprozess initiiert werden. Da sich die Philosophen über die gleichen Merkmale definieren, können sie in einer Klasse zusammengefasst werden. Dem Konstruktor werden die Parameter \inline{name} sowie \inline{leftFork} und  \inline{rightFork} übergeben. Aus letzteren werden die Objekte leftFork und rightFork erzeugt. Diese stehen für die rechte sowie linke Gabel. Mit dem Parameter \inline{name} kann dem Prozess ein Name gegeben werden. \glqq Diese Methode wird nur zu Identifikationszwecken genutzt\grqq \parencite{lock}.
 
@@ -23,7 +23,7 @@ class Philosophen(Process):
         
 \end{lstlisting}
 
-Die von der Klasse \glqq Process \grqq geerbte \inline{run()} -Funktion wurde in das Programm eingefügt um die Handlungsfolge der Tätigkeiten zu bestimmen \parencite[vgl.]{lock} . In der Zeit, in der der Philosoph denkt, schläft der Prozess (Programmzeile 18) repräsentativ. Für den angegebenen Zeitraum wird die Ausführung des Programms angehalten. Ist diese Zeitspanne vorbei, so geht der Programmcode weiter. In diesem Beispiel wird der besprochene Zeitraum zufällig mithilfe der \inline{random} Methode zwischen einer und fünf Sekunden ausgewählt \parencite[vgl.]{sleep}. Wenn der Philosoph fertig mit Denken ist, fordert er die linke Gable an. Danach soll er versuchen, die rechte Gabel zu bekommen. Hat er beide Gabeln so kann er essen. Ist er damit fertig, so kann er erst die rechte und dann die linke Gabel wieder freigeben.
+Die von der Klasse \glqq Process \grqq geerbte \inline{run()} -Funktion wurde in das Programm eingefügt um die Handlungsfolge der Tätigkeiten zu bestimmen \parencite[vgl.]{lock} . In der Zeit, in der der Philosoph denkt, schläft der Prozess (Programmzeile 7) repräsentativ. Für den angegebenen Zeitraum wird die Ausführung des Programms angehalten. Ist diese Zeitspanne vorbei, so geht der Programmcode weiter. In diesem Beispiel wird der besprochene Zeitraum zufällig mithilfe der \inline{random} Methode zwischen einer und fünf Sekunden ausgewählt \parencite[vgl.]{sleep}. Wenn der Philosoph fertig mit Denken ist, fordert er die linke Gabel an. Danach soll er versuchen, die rechte Gabel zu bekommen. Hat er beide Gabeln so kann er essen. Ist er damit fertig, so kann er erst die rechte und dann die linke Gabel wieder freigeben.
 
 \begin{lstlisting}[style = Python, label = {erste Lösung}, caption = {erste Lösung}]
 
