@@ -1,14 +1,15 @@
 \chapter{Fazit}
 \label{fazit}
 
-Zusammenfassend muss gesagt werden, dass eine Verklemmung (= Deadlock) nur unter vier Bedingungen entstehen kann. Sie kann unter dem Modell der speisenden Philosophen veranschaulicht werden. Es gibt verschiedene Arten eine Verklemmung zu visualisieren, wie zum Beispiel der Betriebsmittelbelegungsgraph. Dabei gibt es auch verschiedene Möglichkeiten auf eine Verklemmung zu reagieren. 
+Sie kann unter dem Modell der speisenden Philosophen veranschaulicht werden. Bei diesem Modell läuft es darauf hinaus, dass alle fünf Philosophen die von ihnen linke Gabel in der Hand haben und auf ihre rechte Gabel warten. Es entsteht eine sogenannte Verklemmung, zu Englisch ein Deadlock. Diese Verklemmung kann nur unter vier Bedingungen stattfinden. Es gibt verschiedene Arten eine Verklemmung zu visualisieren, wie zum Beispiel der Betriebsmittelbelegungsgraph. Dabei gibt es auch verschiedene Möglichkeiten auf eine Verklemmung zu reagieren. 
 
 Der Deadlock kann ignoriert werden, wobei durch das verklemmen der Prozesse diese nicht terminieren.
 Wenn die Verklemmung erkannt wurde, kann sie auch beseitigt werden.
 Die Verklemmung kann auch vermieden sowie ausgeschlossen werden, indem der Eintritt einer der vier Bedingungen verhindert wird.
 
 Es gab naive Lösungsansätze, die zumindest nicht verklemmen, allerdings den Effekt von paralleler Programmierung verlieren. 
-Durch Vermittler und Mutex Semaphoren kann diese deadlockfreie Lösung geschaffen werden. 
 In dem Programmbeispiel aus dieser Arbeit wurden jedoch die Gabeln durch Locks repräsentiert. Diese Lösung schafft Höchstmaß an Quasi-Parallelität und ist deadlockfrei. 
 
 Diese Arbeit wurde unter Betracht eines Einprozessorsystems, wie in \ref{sec:begriffe} \nameref{sec:begriffe} dargestellt wurde, mittlerweile gibt es Mehrprozessorsysteme, jedoch gilt auch dort das selbe Prinzip.
+
+Weiterführend kann eine deadlockfreie Lösung des Problems durch Vermittler und Mutex Semaphoren geschaffen werden. 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.9.13)  3 JAN 2021 12:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.9.13)  11 JAN 2021 10:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1102,14 +1102,6 @@ nput line 10.
 
  (./06_fazit.tex
 chapter 5.
-
-LaTeX Warning: Reference `sec:Lösungsansätze' on page 18 undefined on input l
-ine 8.
-
-
-LaTeX Warning: Reference `sec:Lösungansätze' on page 18 undefined on input li
-ne 8.
-
 ) [18
 
 
@@ -1140,9 +1132,6 @@ anged.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
 Package logreq Info: Writing requests to '"00_Vorlage Abschlussarbeit".run.xml'
@@ -1152,23 +1141,23 @@ Package logreq Info: Writing requests to '"00_Vorlage Abschlussarbeit".run.xml'
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 160.
  ) 
 Here is how much of TeX's memory you used:
- 20962 strings out of 480608
- 365783 string characters out of 5905088
- 1192026 words of memory out of 5000000
- 36367 multiletter control sequences out of 15000+600000
- 587955 words of font info for 57 fonts, out of 8000000 for 9000
+ 20957 strings out of 480608
+ 365699 string characters out of 5905088
+ 1192030 words of memory out of 5000000
+ 36363 multiletter control sequences out of 15000+600000
+ 578961 words of font info for 54 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  53i,12n,73p,10198b,3359s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/app/texlive/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</app/texlive/texmf-dis
-t/fonts/type1/public/lm/lmbx12.pfb></app/texlive/texmf-dist/fonts/type1/public/
-lm/lmcsc10.pfb></app/texlive/texmf-dist/fonts/type1/public/lm/lmr12.pfb></app/t
-exlive/texmf-dist/fonts/type1/public/lm/lmri12.pfb></app/texlive/texmf-dist/fon
-ts/type1/public/lm/lmro12.pfb></app/texlive/texmf-dist/fonts/type1/public/lm/lm
-ssbx10.pfb></app/texlive/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on "00_Vorlage Abschlussarbeit.pdf" (22 pages, 1229674 bytes).
+t/fonts/type1/public/lm/lmcsc10.pfb></app/texlive/texmf-dist/fonts/type1/public
+/lm/lmr12.pfb></app/texlive/texmf-dist/fonts/type1/public/lm/lmri12.pfb></app/t
+exlive/texmf-dist/fonts/type1/public/lm/lmro12.pfb></app/texlive/texmf-dist/fon
+ts/type1/public/lm/lmssbx10.pfb></app/texlive/texmf-dist/fonts/type1/public/lm/
+lmtt12.pfb>
+Output written on "00_Vorlage Abschlussarbeit.pdf" (22 pages, 1205337 bytes).
 PDF statistics:
- 401 PDF objects out of 1000 (max. 8388607)
- 356 compressed objects within 4 object streams
+ 398 PDF objects out of 1000 (max. 8388607)
+ 354 compressed objects within 4 object streams
  144 named destinations out of 1000 (max. 500000)
  138 words of extra memory for PDF output out of 10000 (max. 10000000)
 

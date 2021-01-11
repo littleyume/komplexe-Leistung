@@ -2190,24 +2190,25 @@
     <bcf:citekey order="5">tanenbaum2016</bcf:citekey>
     <bcf:citekey order="6">tanenbaum2016</bcf:citekey>
     <bcf:citekey order="7">tanenbaum2016</bcf:citekey>
-    <bcf:citekey order="8">sturm2001</bcf:citekey>
-    <bcf:citekey order="9">baun2017</bcf:citekey>
-    <bcf:citekey order="10">tanenbaum2016</bcf:citekey>
+    <bcf:citekey order="8">sommer2002</bcf:citekey>
+    <bcf:citekey order="9">sturm2001</bcf:citekey>
+    <bcf:citekey order="10">baun2017</bcf:citekey>
     <bcf:citekey order="11">tanenbaum2016</bcf:citekey>
-    <bcf:citekey order="12">philosophers</bcf:citekey>
+    <bcf:citekey order="12">tanenbaum2016</bcf:citekey>
     <bcf:citekey order="13">philosophers</bcf:citekey>
-    <bcf:citekey order="14">baun2017</bcf:citekey>
-    <bcf:citekey order="15">mandl2020</bcf:citekey>
-    <bcf:citekey order="16">tanenbaum2016</bcf:citekey>
+    <bcf:citekey order="14">philosophers</bcf:citekey>
+    <bcf:citekey order="15">baun2017</bcf:citekey>
+    <bcf:citekey order="16">mandl2020</bcf:citekey>
     <bcf:citekey order="17">tanenbaum2016</bcf:citekey>
-    <bcf:citekey order="18">mandl2020</bcf:citekey>
+    <bcf:citekey order="18">tanenbaum2016</bcf:citekey>
     <bcf:citekey order="19">mandl2020</bcf:citekey>
-    <bcf:citekey order="20">lock</bcf:citekey>
+    <bcf:citekey order="20">mandl2020</bcf:citekey>
     <bcf:citekey order="21">lock</bcf:citekey>
-    <bcf:citekey order="22">sleep</bcf:citekey>
-    <bcf:citekey order="23">lock</bcf:citekey>
+    <bcf:citekey order="22">lock</bcf:citekey>
+    <bcf:citekey order="23">sleep</bcf:citekey>
     <bcf:citekey order="24">lock</bcf:citekey>
-    <bcf:citekey order="25">sturm2001</bcf:citekey>
+    <bcf:citekey order="25">lock</bcf:citekey>
+    <bcf:citekey order="26">sturm2001</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">
