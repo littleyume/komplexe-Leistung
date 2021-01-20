@@ -30,3 +30,4 @@
 \contentsline {chapter}{\nonumberline Literatur}{II}{chapter*.7}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Materialienverzeichnis}{III}{chapter*.7}%
+\babel@toc {ngerman}{}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.9.13)  12 JAN 2021 07:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.9.13)  20 JAN 2021 15:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -769,7 +769,7 @@ File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
 
 LaTeX Warning: Label `erste Lösung' multiply defined.
 
-) (./06_fazit.aux))
+) (./06_fazit.aux) (./07_selbst.aux))
 \openout1 = `"00_Vorlage Abschlussarbeit.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 107.
@@ -790,7 +790,8 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 107.
 LaTeX Font Info:    ... okay on input line 107.
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 10
 7.
- (/app/texlive/texmf-dist/tex/latex/lm/t1lmr.fd
+
+(/app/texlive/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 *geometry* driver: auto-detecting
@@ -1115,18 +1116,25 @@ chapter without number
 \tf@lof=\write6
 \openout6 = `"00_Vorlage Abschlussarbeit.lof"'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 160.
  [3
 
 
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 160.
- (./00_Vorlage Abschlussarbeit.aux
-(./01_titel.aux) (./02_einleitung.aux) (./03_grundlagen.aux)
-(./04_speisende_philosophen.aux) (./05_programmierung.aux) (./06_fazit.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 160.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 160.
+\openout2 = `07_selbst.aux'.
+
+ (./07_selbst.tex) [4
+
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 163.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 163.
+
+(./00_Vorlage Abschlussarbeit.aux (./01_titel.aux) (./02_einleitung.aux)
+(./03_grundlagen.aux) (./04_speisende_philosophen.aux) (./05_programmierung.aux
+) (./06_fazit.aux) (./07_selbst.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 163.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 163.
 Package rerunfilecheck Info: File `"00_Vorlage Abschlussarbeit".out' has not ch
 anged.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
@@ -1138,13 +1146,13 @@ Package logreq Info: Writing requests to '"00_Vorlage Abschlussarbeit".run.xml'
 .
 \openout1 = `"00_Vorlage Abschlussarbeit.run.xml"'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 160.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 163.
  ) 
 Here is how much of TeX's memory you used:
- 20958 strings out of 480608
- 365706 string characters out of 5905088
- 1190030 words of memory out of 5000000
- 36363 multiletter control sequences out of 15000+600000
+ 20972 strings out of 480608
+ 365884 string characters out of 5905088
+ 1192664 words of memory out of 5000000
+ 36368 multiletter control sequences out of 15000+600000
  578961 words of font info for 54 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  53i,12n,73p,10198b,3359s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1154,10 +1162,10 @@ t/fonts/type1/public/lm/lmcsc10.pfb></app/texlive/texmf-dist/fonts/type1/public
 exlive/texmf-dist/fonts/type1/public/lm/lmro12.pfb></app/texlive/texmf-dist/fon
 ts/type1/public/lm/lmssbx10.pfb></app/texlive/texmf-dist/fonts/type1/public/lm/
 lmtt12.pfb>
-Output written on "00_Vorlage Abschlussarbeit.pdf" (23 pages, 1206017 bytes).
+Output written on "00_Vorlage Abschlussarbeit.pdf" (24 pages, 1206949 bytes).
 PDF statistics:
- 404 PDF objects out of 1000 (max. 8388607)
- 359 compressed objects within 4 object streams
- 145 named destinations out of 1000 (max. 500000)
+ 409 PDF objects out of 1000 (max. 8388607)
+ 363 compressed objects within 4 object streams
+ 147 named destinations out of 1000 (max. 500000)
  138 words of extra memory for PDF output out of 10000 (max. 10000000)
 
