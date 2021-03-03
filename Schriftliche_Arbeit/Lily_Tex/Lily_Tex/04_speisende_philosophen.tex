@@ -3,12 +3,11 @@
 \section{Vorstellung des Modells}
 \label{vorstellung}
 Das 1965 von Dijkstra formulierte Philosophenproblem lässt sich wie folgt darstellen: Fünf Philosophen sitzen an einem runden Tisch. Jeder der Philosophen hat einen Teller mit Spagetti vor sich und weil die Nudeln so schlupfrig sind, benötigt man zwei Gabeln um sie zu essen. So liegt zwischen jedem Teller eine Gabel. Zusammengefasst gibt es nun fünf Teller mit den Spagetti und fünf Gabeln. Nun hat jeder Philosoph eine bestimmte Reihenfolge wie sie diese Tätigkeiten ausführen. Diese ist fest und unaustauschbar. Erst denken die Philosophen und weil Denken so hungrig macht, essen sie danach und heben erst die linke und dann die rechte Gabel auf. Dies kann auch lange gut gehen. Aber was passiert wenn alle Philosophen gleichzeitig hungrig sind und gleichzeitig nach der, von ihnen aus, linken Gabel greifen? Wenn jeder Philosoph nach seiner linken Gabel greift, hat keiner seine rechte Gabel. Also werden die Philosophen verhungern.\parencite[vgl.][S.220]{tanenbaum2016} 
-
 \begin{figure}[H]
 \caption{Modell \parencite{philosophers}}
 \label{fig:modell}
 \centering
-\includegraphics[width=.4\linewidth]{modell_dining_philosophers.png}
+\includegraphics[width=0.7\linewidth, height=30px]{modell_dining_philosophers.png}
 \end{figure}
 
 Nun werden die Philosophen durch Prozesse ersetzt und die Gabeln durch Betriebsmittel und es kristallisiert sich eine Verklemmung heraus denn alle vier Bedingungen sind erfüllt. Mutual exclusion, da die Philosophen nicht zur selben Zeit mit der gleichen Gabel essen können. Hold and wait, da die Philosophen immer zuerst an sich denken und die Gabel keinem anderen überlassen. No preemption, die Philosophen sind gebildete Leute mit Manieren. Sie reißen einem anderem keine Gabel aus der Hand. Weil die Philosophen an einem runden Tisch sitzen und jeder auf die rechte Gabel wartet wird auch das Zirkuläre Warten erfüllt.
