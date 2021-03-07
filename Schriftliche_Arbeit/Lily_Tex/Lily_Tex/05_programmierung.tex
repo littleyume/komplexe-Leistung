@@ -7,7 +7,7 @@ In diesem Kapitel soll die mögliche Programmierung des Modells der speisenden P
 
 In dem Programm werden die Bibliotheken \glqq Multiprocessing'' sowie \glqq random'' und \glqq time'' importiert. Die Klasse \glqq Philosophen'' erbt von der Klasse \glqq Process'' alle Funktionen und erhält zusätzlich die, die in der Klasse \glqq Philosophen'' definiert werden. Mit der Klasse \glqq Process'' kann ein Subprozess initiiert werden. Da sich die Philosophen über die gleichen Merkmale definieren, können sie in einer Klasse zusammengefasst werden. Dem Konstruktor werden die Parameter \inline{name} sowie \inline{leftFork} und  \inline{rightFork} übergeben. Aus letzteren werden die Objekte leftFork und rightFork erzeugt. Diese stehen für die rechte sowie linke Gabel. Mit dem Parameter \inline{name} kann dem Prozess ein Name gegeben werden. \glqq Diese Methode wird nur zu Identifikationszwecken genutzt\grqq \parencite{lock}.
 
-\begin{lstlisting}[style = Python, label = {erste Lösung}, caption = {Klasse Philosophen}]
+\begin{lstlisting}[style = Python, label = {Code_erste_lösung}, caption = {Klasse Philosophen}]
 
 from multiprocessing import Process, current_process, RLock
 import time
@@ -25,7 +25,7 @@ class Philosophen(Process):
 
 Die von der Klasse \glqq Process \grqq geerbte \inline{run()} -Funktion wurde in das Programm eingefügt um die Handlungsfolge der Tätigkeiten zu bestimmen \parencite[vgl.]{lock} . In der Zeit, in der der Philosoph denkt, schläft der Prozess (Programmzeile 7) repräsentativ. Für den angegebenen Zeitraum wird die Ausführung des Programms angehalten. Ist diese Zeitspanne vorbei, so geht der Programmcode weiter. In diesem Beispiel wird der besprochene Zeitraum zufällig mithilfe der \inline{random} Methode zwischen einer und fünf Sekunden ausgewählt \parencite[vgl.]{sleep}. Wenn der Philosoph fertig mit Denken ist, fordert er die linke Gabel an. Danach soll er versuchen, die rechte Gabel zu bekommen. Hat er beide Gabeln so kann er essen. Ist er damit fertig, so kann er erst die rechte und dann die linke Gabel wieder freigeben.
 
-\begin{lstlisting}[style = Python, label = {erste Lösung}, caption = {erste Lösung}]
+\begin{lstlisting}[style = Python, caption = {erste Lösung}]
 
     def run(self):
         print("{} hat angefangen zu denken"
@@ -67,11 +67,11 @@ Die von der Klasse \glqq Process \grqq geerbte \inline{run()} -Funktion wurde in
 Nun der Lösungsansatz hierbei ist, dass die Gabeln durch einen RLock repräsentiert werden. Das heißt die Prozesse besetzen immer Sperren. Um die Sperren zu besetzen, ruft der Prozess die \inline{aquire()}-Funktion auf. Um sie wieder freizugeben ruft er die \inline{release()}-Funktion auf. Diese \glqq Lösung\grqq ist jedoch nicht deadlockfrei. Wollen zwei Prozesse die gleiche Sperre besetzen so verklemmt das Programm sofort. 
 
 \section{Lösungen}
-\label{endlösung}
+\label{endloesung}
 
 Um diesem Problem vorzubeugen kann man der \inline{aquire()}-Funktion über den Parameter \inline{blocking} ein True oder ein False mitgeben. Setzt man blocking auf True, so geht der Programmcode nicht weiter bis die Funktion ausgeführt ist. In diesem Fall wenn der Lock besetzt ist. Das heißt, will ein Prozess den Lock besetzen, so muss er immer wieder versuchen, diesen zu besetzen bis dieser wieder freigegeben ist \parencite[vgl. ]{lock}. Der Prozess wird also immer wieder versuchen die linke Gabel zu belegen, bis diese freigegeben ist. 
 
-\begin{lstlisting}[style = Python, label = {endloesung}, caption = {Endlösung}]
+\begin{lstlisting}[style = Python, caption = {Endlösung}]
 
     def run(self):
         print("{} hat mit denken begonnen"
