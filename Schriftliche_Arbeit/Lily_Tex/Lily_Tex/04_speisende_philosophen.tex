@@ -7,7 +7,7 @@ Das 1965 von Dijkstra formulierte Philosophenproblem lässt sich wie folgt darst
 \caption{Modell \parencite{philosophers}}
 \label{fig:modell}
 \centering
-\includegraphics[width=0.7\linewidth, height=30px]{modell_dining_philosophers.png}
+\includegraphics[width=0.3\linewidth]{modell_dining_philosophers.png}
 \end{figure}
 
 Nun werden die Philosophen durch Prozesse ersetzt und die Gabeln durch Betriebsmittel und es kristallisiert sich eine Verklemmung heraus denn alle vier Bedingungen sind erfüllt. Mutual exclusion, da die Philosophen nicht zur selben Zeit mit der gleichen Gabel essen können. Hold and wait, da die Philosophen immer zuerst an sich denken und die Gabel keinem anderen überlassen. No preemption, die Philosophen sind gebildete Leute mit Manieren. Sie reißen einem anderem keine Gabel aus der Hand. Weil die Philosophen an einem runden Tisch sitzen und jeder auf die rechte Gabel wartet wird auch das Zirkuläre Warten erfüllt.
@@ -58,7 +58,7 @@ Eine Verklemmung ist bei einem solchen Diagramm nur möglich, wenn sich die Bere
 \section{Lösungsansätze}
 \label{sec:lösung}
 
-Eine der möglichen Lösungen besteht daraus, das Problem zu ignorieren und einfach nichts zu tun. Das ist wahrlich eine sehr naive Lösung, die dennoch häufig benutzt wird, da sie ohne Aufwand für den laufenden Betrieb ist \parencite[vgl. ][S.79]{mandl2020} . Bei dieser Lösung terminieren jedoch die verklemmten Prozesse nicht.
+Eine der möglichen Lösungen besteht daraus, das Problem zu ignorieren und einfach nichts zu tun. Das ist wahrlich eine sehr naive Lösung, die dennoch häufig benutzt wird, da sie ohne Aufwand für den laufenden Betrieb ist \parencite[vgl. ][S.79]{mandl2020}. Bei dieser Lösung terminieren jedoch die verklemmten Prozesse nicht.
  
 Zur Vermeidung einer Verklemmung gibt es ebenfalls viele Möglichkeiten. Diese sind jedoch oftmals sehr  aufwendig. Auf unser Beispiel der speisenden Philosophen zurückkommend, besteht eine Lösung darin, eine vermittelnde Instanz zu erschaffen, welcher die Regeln bzw. den Ablauf für die Tätigkeiten der Philosophen auf den Tisch legt. Die Reihenfolge der Tätigkeiten der Philosophen wird genau festgelegt. Bei dieser Lösung kann bei fünf Gabeln nur ein Philosoph essen.\parencite[vgl.][S.220]{tanenbaum2016}
 

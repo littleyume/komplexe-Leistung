@@ -1,6 +1,6 @@
 %Dokumentklasse
 \documentclass[a4paper,12pt]{scrreprt}
-\usepackage[left= 2.5cm,right = 2.5cm, bottom = 4 cm, top = 3 cm]{geometry}
+\usepackage[left= 2.5cm,right = 2.5cm, bottom = 2.5 cm, top = 3 cm]{geometry}
 %\usepackage[onehalfspacing]{setspace}
 % ============= Packages =============
 
@@ -40,6 +40,8 @@
 \linespread{1.5}
 %=====================================
 
+% CHAPTER
+
 % Code
 \usepackage{listings}
 
@@ -61,6 +63,7 @@
     frame       = single,
     numbers     = left,
     showspaces  = false,
+    xleftmargin = 0.7cm,
     showstringspaces    = false,
     captionpos  = t,
     caption     = \lstname,
@@ -101,6 +104,7 @@
 
 % ============= Table of Contents umdefinieren ================
 
+\RedeclareSectionCommand[beforeskip = 0pt]{chapter}
 
 % ============= Dokumentbeginn =============
 
