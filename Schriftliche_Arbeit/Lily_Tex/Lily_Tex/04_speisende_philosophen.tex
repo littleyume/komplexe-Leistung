@@ -7,16 +7,16 @@ Das 1965 von Dijkstra formulierte Philosophenproblem lässt sich wie folgt darst
 \caption{Modell \parencite{philosophers}}
 \label{fig:modell}
 \centering
-\includegraphics[width=0.3\linewidth]{modell_dining_philosophers.png}
+\includegraphics[width=0.4\linewidth]{modell_dining_philosophers.png}
 \end{figure}
 
 Nun werden die Philosophen durch Prozesse ersetzt und die Gabeln durch Betriebsmittel und es kristallisiert sich eine Verklemmung heraus denn alle vier Bedingungen sind erfüllt. Mutual exclusion, da die Philosophen nicht zur selben Zeit mit der gleichen Gabel essen können. Hold and wait, da die Philosophen immer zuerst an sich denken und die Gabel keinem anderen überlassen. No preemption, die Philosophen sind gebildete Leute mit Manieren. Sie reißen einem anderem keine Gabel aus der Hand. Weil die Philosophen an einem runden Tisch sitzen und jeder auf die rechte Gabel wartet wird auch das Zirkuläre Warten erfüllt.
 
 \section{Darstellung des Problems}
 \label{problem}
-Um das Problem ausfindig zu machen, gibt es verschiedene Möglichkeiten eine Verklemmung grafisch darzustellen. Um das Problem besser auflösen zu können, muss es erst sichtbar gemacht werden.
+Um das Problem ausfindig zu machen, gibt es verschiedene Möglichkeiten eine Verklemmung grafisch darzustellen. Das Problem lässt sich besser auflösen, wenn es sichtbar gemacht werden kann.
 
-Vorgestellt wird zuerst der Betriebsmittelbelegungsgraph. Bei diesem werden die Prozesse mit Kreis und die Betriebsmittel mit Quadrat dargestellt. Beide, die Prozesse und Betriebsmittel, werden ebenfalls als Knoten bezeichnet. Die Belegung und Anforderung auf Betriebsmittel wird mit Pfeilen, auch Kanten genannt dargestellt. Kommt dabei der Pfeil von dem Betriebsmittel zu dem Prozess, so bedeutet das, dass der Prozess dieses schon im Besitz hat. Verläuft der Pfeil von Prozess zu Betriebsmittel, so stellt der Prozess die Anforderung an das Betriebsmittel. Der Grundaufbau wird in Abbildung \ref{fig:normaler_betriebsmittelbelegungsgraph} gezeigt.
+Vorgestellt wird zuerst der Betriebsmittelbelegungsgraph. Bei diesem werden die Prozesse mit Kreis und die Betriebsmittel mit Quadrat dargestellt. Beide, die Prozesse und Betriebsmittel, werden ebenfalls als Knoten bezeichnet. Die Belegung und Anforderung auf Betriebsmittel wird mit Pfeilen, auch Kanten genannt, dargestellt. Kommt dabei der Pfeil von dem Betriebsmittel zu dem Prozess, so bedeutet das, dass der Prozess dieses schon im Besitz hat. Verläuft der Pfeil von Prozess zu Betriebsmittel, so stellt der Prozess die Anforderung an das Betriebsmittel. Der Grundaufbau wird in Abbildung \ref{fig:normaler_betriebsmittelbelegungsgraph} gezeigt.
 
 \begin{figure}[h]
 \caption{Normaler Betriebsmittelbelegungsgraph}
@@ -35,7 +35,7 @@ P1 besitzt Betriebsmittel B3 und benötigt B1. P2 hat Betriebsmittel B1 im Besit
 \includegraphics[width=.4\linewidth]{Belegungsgraph2.png}
 \end{figure}
 
-Eine andere Möglichkeit, eine Verklemmung darzustellen, ist das Prozess-Ablaufdiagramm. Bei letzterem werden die Prozesse auf der x- bzw. y-Achse dargestellt und deren Prozessfortschritt als Linie. Verläuft die Linie in y-Richtung, so rechnet P1, verläuft sie in x-Richtung rechnet P2. Die in dem Diagramm dargestellten ``Ecken'' symbolisieren die Änderung des Rechenvorgangs von P1 auf P2. Auf jeden der Achsen sind außerdem die angeforderten Betriebsmittel gekennzeichnet. Das orangene Feld kennzeichnet die Spanne wann ein Betriebsmittel belegt wird. In diesen Bereich können die Prozesse nicht hinein.
+Eine andere Möglichkeit, eine Verklemmung darzustellen, ist das Prozess-Ablaufdiagramm. Bei letzterem werden die Prozesse auf der x- bzw. y-Achse dargestellt und deren Prozessfortschritt als Linie. Verläuft die Linie in y-Richtung, so rechnet P1, verläuft sie in x-Richtung rechnet P2. Die in dem Diagramm dargestellten \glqq Ecken\grqq  symbolisieren die Änderung des Rechenvorgangs von P1 auf P2. Auf jeden der Achsen sind außerdem die angeforderten Betriebsmittel gekennzeichnet. Das orangene Feld kennzeichnet die Spanne wann ein Betriebsmittel belegt wird. In diesen Bereich können die Prozesse nicht hinein.
 In Abbildung \ref{fig:normales_Ablaufdiagramm} wird ein normales Prozessablaufdiagramm ohne eine Verklemmung dargestellt.
 
 \begin{figure}[H]

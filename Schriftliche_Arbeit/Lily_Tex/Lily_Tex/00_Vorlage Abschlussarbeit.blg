@@ -1,15 +1,15 @@
 [0] Config.pm:312> INFO - This is Biber 2.15
 [0] Config.pm:315> INFO - Logfile is '00_Vorlage Abschlussarbeit.blg'
-[59] biber:330> INFO - === Mo Mär  8, 2021, 14:34:59
-[68] Biber.pm:415> INFO - Reading '00_Vorlage Abschlussarbeit.bcf'
-[115] Biber.pm:952> INFO - Found 10 citekeys in bib section 0
-[124] Biber.pm:4334> INFO - Processing section 0
-[131] Biber.pm:4523> INFO - Looking for bibtex format file 'biblio.bib' for section 0
-[132] bibtex.pm:1682> INFO - LaTeX decoding ...
-[138] bibtex.pm:1494> INFO - Found BibTeX data source 'biblio.bib'
-[187] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[187] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[187] Biber.pm:4162> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'de-DE'
-[187] Biber.pm:4168> INFO - No sort tailoring available for locale 'de-DE'
-[195] bbl.pm:651> INFO - Writing '00_Vorlage Abschlussarbeit.bbl' with encoding 'UTF-8'
-[198] bbl.pm:754> INFO - Output to 00_Vorlage Abschlussarbeit.bbl
+[57] biber:330> INFO - === Mi Mär 17, 2021, 17:31:04
+[66] Biber.pm:415> INFO - Reading '00_Vorlage Abschlussarbeit.bcf'
+[112] Biber.pm:952> INFO - Found 10 citekeys in bib section 0
+[122] Biber.pm:4334> INFO - Processing section 0
+[128] Biber.pm:4523> INFO - Looking for bibtex format file 'biblio.bib' for section 0
+[129] bibtex.pm:1682> INFO - LaTeX decoding ...
+[135] bibtex.pm:1494> INFO - Found BibTeX data source 'biblio.bib'
+[177] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[177] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[177] Biber.pm:4162> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'de-DE'
+[177] Biber.pm:4168> INFO - No sort tailoring available for locale 'de-DE'
+[185] bbl.pm:651> INFO - Writing '00_Vorlage Abschlussarbeit.bbl' with encoding 'UTF-8'
+[188] bbl.pm:754> INFO - Output to 00_Vorlage Abschlussarbeit.bbl

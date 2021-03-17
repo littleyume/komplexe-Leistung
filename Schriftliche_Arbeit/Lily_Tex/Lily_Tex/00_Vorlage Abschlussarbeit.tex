@@ -1,6 +1,6 @@
 %Dokumentklasse
 \documentclass[a4paper,12pt]{scrreprt}
-\usepackage[left= 2.5cm,right = 2.5cm, bottom = 2.5 cm, top = 3 cm]{geometry}
+\usepackage[left= 2.5cm,right = 2.5cm, bottom = 4 cm, top = 3 cm]{geometry}
 %\usepackage[onehalfspacing]{setspace}
 % ============= Packages =============
 
@@ -113,7 +113,7 @@
 \pagestyle{empty}
 
 \include{01_titel}
-\pagenumbering{Roman}
+%\pagenumbering{Roman}
 % Beendet eine Seite und erzwingt auf den nachfolgenden Seiten die Ausgabe aller Gleitobjekte (z.B. Abbildungen), die bislang definiert, aber noch nicht ausgegeben wurden. Dieser Befehl fügt, falls nötig, eine leere Seite ein, sodaß die nächste Seite nach den Gleitobjekten eine ungerade Seitennummer hat. 
 \cleardoubleoddpage
 
@@ -132,8 +132,8 @@
 %Inhaltsverzeichnis
 \tableofcontents
 
-\newcounter{savepage}
-\setcounter{savepage}{\arabic{page}}
+%\newcounter{savepage}
+%\setcounter{savepage}{\arabic{page}}
 \cleardoublepage\pagenumbering{arabic}
 
 
@@ -146,8 +146,8 @@
 
 \pagestyle{empty}
 
-\pagenumbering{Roman}
-\setcounter{page}{2}
+%\pagenumbering{Roman}
+%\setcounter{page}{2}
 \printbibliography[heading=bibintoc]
 
 
